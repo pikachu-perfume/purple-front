@@ -8,8 +8,8 @@ const useThemeStyles = makeStyles((theme: Theme) => ({
   textSubColor: {
     color: theme.perfume.textSubColor,
   },
-  mainBgColor: {
-    backgroundColor: theme.perfume.mainBgColor,
+  bgMainColor: {
+    backgroundColor: theme.perfume.bgMainColor,
   },
 }));
 

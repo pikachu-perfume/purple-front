@@ -25,7 +25,7 @@ export default function TestAlbumList() {
             {eachData.id}{" "}
           </Typography>
           <Typography>{eachData.userId} </Typography>
-          <Box className={styles.mainBgColor}>Test Bg</Box>
+          <Box className={styles.bgMainColor}>Test Bg</Box>
         </Box>
       ))}
     </div>
