@@ -1,0 +1,70 @@
+name: Front Server (CI)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Out Repository
+        uses: actions/checkout@v2
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Login to Amazon ECR Public
+        id: login-ecr-public
+        uses: aws-actions/amazon-ecr-login@v2
+        with:
+          registry-type: public
+
+      - name: Build, tag, and push docker image to Amazon ECR Public
+        id: docker-builder
+        env:
+          REGISTRY: ${{ steps.login-ecr-public.outputs.registry }}
+          REGISTRY_ALIAS: ${{ secrets.ECR_REGISTRY_ALIAS }}
+          REPOSITORY: purple-front-ecr
+          IMAGE_TAG: latest
+        run: |
+          export DOCKER_TAG=$REGISTRY/$REGISTRY_ALIAS/$REPOSITORY:$IMAGE_TAG
+          echo "build start"
+          docker build -t $DOCKER_TAG .
+          echo "build finish and push start"
+          docker push $DOCKER_TAG
+          echo "push finish"
+          echo "::set-output name=DOCKER_TAG::$DOCKER_TAG"
+          echo "push completed"
+
+      - name: Logout of Amazon ECR
+        run: docker logout ${{ env.ECR_REGISTRY }}
+
+      - name: SSH to EC2 Instance and Update Docker Container
+        uses: appleboy/ssh-action@master
+        env:
+          TAG: ${{ steps.docker-builder.outputs.DOCKER_TAG }}
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          envs: TAG
+          script: |
+            CONTAINER_ID=$(docker ps -q --filter ancestor=$TAG)
+            IMAGE_ID=$(docker images --format "{{.ID}}" $TAG)
+            if [ ! -z "$CONTAINER_ID" ]; then
+              echo "Already run docker exist, stop this container"
+              docker stop $CONTAINER_ID
+              docker rm $CONTAINER_ID
+            fi
+            if [ ! -z "$IMAGE_ID" ]; then
+              echo "Already docker images exist, remove"
+              docker rmi $IMAGE_ID
+            fi
+            docker pull $TAG
+            docker run -d -p 3000:3000 $TAG
