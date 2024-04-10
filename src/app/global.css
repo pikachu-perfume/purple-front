@@ -1,26 +1,19 @@
 html {
     height: 100%;
-    @media (max-width: 1920px) {
+    
+    @media (min-width:1200px) {
         font-size: 100%;
     }
 
-    @media (max-width: 1500px) {
+    @media (min-width:800px) and (max-width:1200px) {
         font-size: 100%;
     }
 
-    @media (max-width: 1200px) {
-        font-size: 100%;
-    }
-
-    @media (max-width: 800px) {
-        font-size: 100%;
-    }
-
-    @media (max-width: 550px) {
+    @media (min-width:600px) and (max-width:800px) {
         font-size: 81.25%;
     }
 
-    @media (max-width: 300px) {
+    @media (min-width:0px) and (max-width:600px) {
         font-size: 62.5%;
     }
 }
