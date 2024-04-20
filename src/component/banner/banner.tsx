@@ -1,28 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import { S } from "./styles";
 import { Star, FiberManualRecord } from "@mui/icons-material";
 
-type TresData = {
-  text: string;
-};
-
-function Banner({ text }: TresData) {
-  const [introduction, setIntroduction] = useState(false);
-
-  const handleMoreBtn = () => {
-    setIntroduction(!introduction);
-  };
-
+function Banner() {
   return (
     <S.Wrapper>
-      <S.BannerImg
-        src={"/assets/images/test_image.png"}
-        alt="img"
-        width={300}
-        height={300}
-      />
+      <S.BannerImg src={"/assets/images/test_image.png"} />
       <S.ContentWrap>
         <S.TopContent>
           <span>바이레도</span>
@@ -37,24 +21,12 @@ function Banner({ text }: TresData) {
             <div></div>
           </S.Score>
         </S.TopContent>
-        {introduction ? (
-          <S.BannerInfo>{text}</S.BannerInfo>
-        ) : (
-          <>
-            {text.length > 80 ? (
-              <>
-                <S.BannerInfo>
-                  {text.slice(0, 80)}...
-                  <span onClick={handleMoreBtn} style={{ color: "#9091a0" }}>
-                    더보기
-                  </span>
-                </S.BannerInfo>
-              </>
-            ) : (
-              <S.BannerInfo>{text}</S.BannerInfo>
-            )}
-          </>
-        )}
+
+        <S.BannerInfo>
+          안개가 자욱한 시원한 향기입니다.안개가 자욱한 시원한 향기입니다.
+          안개가 자욱한 시원한 향기입니다.안개가 자욱한 시원한 향기입니다.
+          안개가 자욱한 시원한 향기입니다.안개가 자욱한 시원한 향기입니다.
+        </S.BannerInfo>
       </S.ContentWrap>
     </S.Wrapper>
   );

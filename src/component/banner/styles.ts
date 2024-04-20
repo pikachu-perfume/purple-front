@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import Image from "next/image";
 
 const Wrapper = styled.div`
   display: flex;
@@ -8,30 +7,30 @@ const Wrapper = styled.div`
   justify-content: center;
   background-color: white;
   border-radius: 0.6rem;
-  width: 361px;
+  width: 100%;
+  max-width: 36rem;
 `;
 
-const BannerImg = styled(Image)`
-  height: 250px;
+const BannerImg = styled.img`
+  height: 25rem;
   border-radius: 0.6rem 0.6rem 0 0;
-  background-color: bisque;
   width: 100%;
 `;
 
 const ContentWrap = styled.div`
   padding: 1rem;
-  height: 142px;
+  height: 14.2rem;
 `;
 
 const TopContent = styled.div`
-  margin: 10px 0;
+  margin: 1rem 0;
   & > span {
     color: #9091a0;
   }
 `;
 
 const Title = styled.div`
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 700;
 `;
 
@@ -42,16 +41,20 @@ const Score = styled.div`
 
 const CategoryWrap = styled.div`
   display: flex;
-  margin-left: 5px;
+  margin-left: 0.5rem;
 
   & > span {
-    margin-left: 5px;
+    margin-left: 0.5rem;
   }
 `;
 
 const BannerInfo = styled.div`
-  height: 3.75rem;
-  width: 320px;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const S = {
