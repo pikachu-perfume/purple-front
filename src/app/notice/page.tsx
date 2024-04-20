@@ -1,5 +1,5 @@
-import MyNoticeButton from "../../component/atom/MyNoticeButton";
-import MyNoticeList from "@/component/atom/MyNoticeList";
+import MyNoticeButton from "../../components/atom/MyNoticeButton";
+import MyNoticeList from "@/components/atom/MyNoticeList";
 
 export default function Notice() {
   return (

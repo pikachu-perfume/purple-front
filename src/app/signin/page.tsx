@@ -1,8 +1,8 @@
 "use client";
 
-import OAuthLoginButton from "@/component/atom/OAuthLoginButton";
+import OAuthLoginButton from "@/components/atom/OAuthLoginButton";
 import { S } from "./styles";
-import { OauthType } from "@/app/constant/session";
+import { OauthType } from "@/constant/session";
 
 export default function SignInPage() {
   return (

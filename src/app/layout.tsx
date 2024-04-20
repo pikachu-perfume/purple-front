@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import ReactQueryProviders from "@/provider/reactQueryProviders";
 import MuiProvider from "@/provider/muiProvider";
 import { ReactNode } from "react";
-import { Body, HTML } from "@/component/atom/BoxComponents";
+import { Body, HTML } from "@/components/atom/BoxComponents";
 import { CssBaseline } from "@mui/material";
 
 export const metadata: Metadata = {

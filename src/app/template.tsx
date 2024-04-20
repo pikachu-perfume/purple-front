@@ -1,8 +1,8 @@
 "use client";
 import { FC, useMemo } from "react";
 import useDeviceType, { MAX_MOBILE_WIDTH } from "@/hook/screen/useDeviceType";
-import { EmptyPropsChildren } from "@/app/constant/commonTypes";
-import { Footer, Header, Main, Section } from "@/component/atom/BoxComponents";
+import { EmptyPropsChildren } from "@/constant/commonTypes";
+import { Footer, Header, Main, Section } from "@/components/atom/BoxComponents";
 import { AppBar } from "@mui/material";
 
 export default function Template({ children }: { children: React.ReactNode }) {
