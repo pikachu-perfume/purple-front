@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import { TestDTO } from "@/types/test";
+import { TestDTO } from "@/dto/test";
 import { getAlbums } from "@/service/test";
 import { Box, Typography } from "@mui/material";
 import useThemeStyles from "@/hook/useThemeStyles";
