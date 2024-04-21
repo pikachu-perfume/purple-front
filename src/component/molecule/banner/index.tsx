@@ -8,6 +8,7 @@ function PublicBanners() {
   return (
     <Wrap>
       <Banner />
+      <Banner />
     </Wrap>
   );
 }
@@ -15,6 +16,7 @@ export default PublicBanners;
 
 const Wrap = styled.div`
   display: grid;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
   gap: 10px;
 `;
