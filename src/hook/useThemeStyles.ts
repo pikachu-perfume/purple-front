@@ -8,6 +8,12 @@ const useThemeStyles = makeStyles((theme: Theme) => ({
   textSubColor: {
     color: theme.perfume.textSubColor,
   },
+  textDisableColor: {
+    color: theme.perfume.textDisable,
+  },
+  mainThemeColor: {
+    color: theme.perfume.mainThemeColor,
+  },
   bgMainColor: {
     backgroundColor: theme.perfume.bgMainColor,
   },

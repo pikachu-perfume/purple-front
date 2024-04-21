@@ -9,6 +9,8 @@ declare module "@mui/material/styles/createTheme" {
     perfume: {
       textMainColor: string;
       textSubColor: string;
+      textDisable: string;
+      mainThemeColor: string;
       bgMainColor: string;
     };
   }
@@ -17,6 +19,8 @@ declare module "@mui/material/styles/createTheme" {
     perfume?: {
       textMainColor?: string;
       textSubColor?: string;
+      textDisable?: string;
+      mainThemeColor?: string;
       bgMainColor?: string;
     };
   }
@@ -24,8 +28,10 @@ declare module "@mui/material/styles/createTheme" {
 
 const theme = createTheme({
   perfume: {
-    textMainColor: "#ff00ff",
-    textSubColor: "#00ff00",
+    textMainColor: "#393941",
+    textSubColor: "#41424B",
+    textDisable: "#9091A0",
+    mainThemeColor: "#FF6E62",
     bgMainColor: "#0000ff",
   },
 });
