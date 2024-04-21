@@ -4,6 +4,7 @@ import { Box, Typography } from "@mui/material";
 
 interface PropTypes {
   type: OauthType;
+  onClick: (type: OauthType) => void;
 }
 
 type ButtonAssetTypes = {
@@ -22,7 +23,7 @@ const buttonAsset: ButtonAssetTypes = {
   },
 };
 
-const OAuthLoginButton: FC<PropTypes> = ({ type }) => {
+const OAuthLoginButton: FC<PropTypes> = ({ type, onClick }) => {
   const { img, color, text } = buttonAsset[type];
   return (
     <Box
@@ -33,6 +34,7 @@ const OAuthLoginButton: FC<PropTypes> = ({ type }) => {
       bgcolor={color}
       maxWidth={"24rem"}
       width={"100%"}
+      onClick={() => onClick(type)}
     >
       <img
         src={img}
