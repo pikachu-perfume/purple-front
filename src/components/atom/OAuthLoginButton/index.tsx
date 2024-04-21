@@ -1,4 +1,4 @@
-import { OauthType } from "@/app/constant/session";
+import { OauthType } from "@/constant/session";
 import { FC } from "react";
 import { Box, Typography } from "@mui/material";
 
