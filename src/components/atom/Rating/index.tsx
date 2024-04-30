@@ -11,7 +11,6 @@ function Rating() {
   const handleRatingClick = (selectRating: number) => {
     setRating(selectRating);
   };
-
   return (
     <S.Wrapper>
       {[...Array(5)].map((_, idx) => (
@@ -28,7 +27,7 @@ const Wrapper = styled.div`
   display: flex;
 
   & > div > * {
-    font-size: 4.5rem;
+    font-size: 4.7rem;
     color: #ff6e62;
   }
 `;
