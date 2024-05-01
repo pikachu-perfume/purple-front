@@ -1,4 +1,4 @@
-import PublicBanners from "@/components/banner";
+import PublicBanners from "@/component/molecule/banner";
 
 export default function MainPage() {
   return <PublicBanners />;
