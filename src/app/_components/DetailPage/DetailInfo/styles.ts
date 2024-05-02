@@ -1,7 +1,8 @@
+import { theme } from "@/styles/theme";
 import styled from "@emotion/styled";
 
 const Wrapper = styled.div`
-  background-color: white;
+  background-color: ${theme.color.white};
   padding: 2rem;
 `;
 
@@ -14,8 +15,8 @@ const InfoTitle = styled.div`
   align-items: center;
 
   & > span {
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: ${theme.fontSize.big};
+    font-weight: ${theme.fontWeight.semiBold};
     margin-left: 1rem;
   }
 `;
@@ -28,13 +29,13 @@ const NoteInfo = styled.div`
 
 const NoteContent = styled.div`
   display: flex;
-  font-size: 1.6rem;
+  font-size: ${theme.fontSize.base};
   margin-bottom: 2rem;
 
   & > span {
     margin-right: 1rem;
-    color: gray;
-    font-weight: 600;
+    color: ${theme.color.textDisabled};
+    font-weight: ${theme.fontWeight.semiBold};
   }
 `;
 

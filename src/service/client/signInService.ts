@@ -1,5 +1,5 @@
 import clientHttp from "@/utils/http/clientHttp";
-import { OauthType } from "@/app/constant/session";
+import { OauthType } from "@/constant/session";
 import { AuthLoginTryDTO } from "@/dto/authDTO";
 
 export async function clientCreateLoginTry(type: OauthType) {

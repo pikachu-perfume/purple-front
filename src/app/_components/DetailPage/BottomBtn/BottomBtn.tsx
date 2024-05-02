@@ -1,14 +1,12 @@
 "use client";
 
-import useThemeStyles from "@/hook/useThemeStyles";
 import { S } from "./styles";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 function BottomBtn() {
-  const { textDisableColor } = useThemeStyles();
   return (
     <S.Wrapper>
-      <S.HeartBtn classes={textDisableColor}>
+      <S.HeartBtn>
         <FavoriteBorderIcon
           sx={{ fontSize: "2.5rem", marginBottom: "0.3rem" }}
         />

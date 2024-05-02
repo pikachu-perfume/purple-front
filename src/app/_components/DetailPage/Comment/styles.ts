@@ -1,8 +1,9 @@
+import { theme } from "@/styles/theme";
 import styled from "@emotion/styled";
 
 // DetailComment
 const Wrapper = styled.div`
-  background-color: white;
+  background-color: ${theme.color.white};
   padding: 1.6rem;
 `;
 
@@ -11,8 +12,8 @@ const TotalComment = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: ${theme.fontSize.base};
+  font-weight: ${theme.fontWeight.bold};
 
   & > div > span {
     color: red;
@@ -29,10 +30,10 @@ const CommentButtonWrap = styled.div`
     height: 5rem;
     border: 1px solid gray;
     border-radius: 1rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: gray;
-    background-color: white;
+    font-size: ${theme.fontSize.md};
+    font-weight: ${theme.fontWeight.bold};
+    color: ${theme.color.textDisabled};
+    background-color: ${theme.color.white};
   }
 `;
 
@@ -41,18 +42,18 @@ const ReviewWrapper = styled.div`
   padding: 2rem 0;
 
   & > span {
-    font-weight: 700;
-    font-size: 1.4rem;
+    font-weight: ${theme.fontWeight.bold};
+    font-size: ${theme.fontSize.sm};
   }
 `;
 
 const Rating = styled.div`
-  font-size: 2rem;
+  font-size: ${theme.fontSize.big};
   margin: 0.5rem 0;
 `;
 
 const ReviewContent = styled.div`
-  font-size: 1.4rem;
+  font-size: ${theme.fontSize.sm};
   word-wrap: break-word;
   display: -webkit-box;
   -webkit-line-clamp: 2;

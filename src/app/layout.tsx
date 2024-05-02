@@ -1,9 +1,7 @@
 import "./global.css";
 import type { Metadata } from "next";
 import ReactQueryProviders from "@/provider/reactQueryProviders";
-import MuiProvider from "@/provider/muiProvider";
 import { ReactNode } from "react";
-import { Body, HTML } from "@/components/atom/BoxComponents";
 import { CssBaseline } from "@mui/material";
 
 export const metadata: Metadata = {
@@ -13,13 +11,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <HTML lang="en" height={"100%"}>
-      <Body height={"100%"}>
+    <html lang="en">
+      <body suppressHydrationWarning={true}>
         <ReactQueryProviders>
           <CssBaseline />
-          <MuiProvider>{children}</MuiProvider>
+          {children}
         </ReactQueryProviders>
-      </Body>
-    </HTML>
+      </body>
+    </html>
   );
 }

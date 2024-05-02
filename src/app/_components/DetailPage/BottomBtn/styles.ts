@@ -1,5 +1,5 @@
+import { theme } from "@/styles/theme";
 import styled from "@emotion/styled";
-import { Typography } from "@mui/material";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -7,18 +7,19 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: white;
+  background-color: ${theme.color.white};
   padding: 0 1.6rem;
-  border: solid 1px #d9d9d9;
+  border: solid 1px ${theme.color.grayColor[200]};
 `;
 
-const HeartBtn = styled(Typography)`
+const HeartBtn = styled.div`
   display: flex;
   width: 5rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: ${theme.fontSize.xs};
+  color: ${theme.color.textDisabled};
 `;
 
 const ButtonWrap = styled.div`
@@ -30,17 +31,17 @@ const ButtonWrap = styled.div`
     margin-left: 2rem;
     border: none;
     border-radius: 0.8rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: white;
+    font-size: ${theme.fontSize.md};
+    font-weight: ${theme.fontWeight.bold};
+    color: ${theme.color.white};
   }
 
   & > button:first-child {
-    background-color: #d9d9d9;
+    background-color: ${theme.color.grayColor[200]};
   }
 
   & > button:last-child {
-    background-color: #ff6e62;
+    background-color: ${theme.color.primary};
   }
 `;
 

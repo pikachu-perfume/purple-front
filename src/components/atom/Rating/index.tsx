@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import StarIcon from "@mui/icons-material/Star";
-import StarBorderIcon from "@mui/icons-material/StarBorder";
 import styled from "@emotion/styled";
 
 function Rating() {
@@ -15,7 +13,11 @@ function Rating() {
     <S.Wrapper>
       {[...Array(5)].map((_, idx) => (
         <div key={idx} onClick={() => handleRatingClick(idx + 1)}>
-          {idx < rating ? <StarIcon /> : <StarBorderIcon />}
+          {idx < rating ? (
+            <img src="/assets/images/star.png" />
+          ) : (
+            <img src="/assets/images/starOpacity.png" />
+          )}
         </div>
       ))}
     </S.Wrapper>
@@ -27,8 +29,7 @@ const Wrapper = styled.div`
   display: flex;
 
   & > div > * {
-    font-size: 4.7rem;
-    color: #ff6e62;
+    margin: 0.6rem;
   }
 `;
 

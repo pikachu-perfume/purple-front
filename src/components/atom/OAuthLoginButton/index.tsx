@@ -1,6 +1,7 @@
 import { OauthType } from "@/constant/session";
 import { FC } from "react";
-import { Box, Typography } from "@mui/material";
+import { theme } from "@/styles/theme";
+import styled from "@emotion/styled";
 
 interface PropTypes {
   type: OauthType;
@@ -18,7 +19,7 @@ type ButtonAssetTypes = {
 const buttonAsset: ButtonAssetTypes = {
   [OauthType.KAKAO]: {
     text: "카카오 로그인",
-    color: "#fee500",
+    color: `${theme.color.kakao}`,
     img: "/assets/images/kakao_logo.png",
   },
 };
@@ -26,34 +27,33 @@ const buttonAsset: ButtonAssetTypes = {
 const OAuthLoginButton: FC<PropTypes> = ({ type, onClick }) => {
   const { img, color, text } = buttonAsset[type];
   return (
-    <Box
-      borderRadius={"0.6rem"}
-      padding={"11px 14px"}
-      display={"flex"}
-      alignItems={"center"}
-      bgcolor={color}
-      maxWidth={"24rem"}
-      width={"100%"}
-      onClick={() => onClick(type)}
-    >
-      <img
-        src={img}
-        alt={text}
-        style={{
-          maxWidth: "1.8rem",
-          maxHeight: "1.8rem",
-          objectFit: "cover",
-        }}
-      />
-      <Typography
-        fontSize={"1.5rem"}
-        lineHeight={"2.2rem"}
-        flex={1}
-        textAlign={"center"}
-      >
-        {text}
-      </Typography>
-    </Box>
+    <Wrapper bgColor={color} onClick={() => onClick(type)}>
+      <LoginLogo src={img} alt={text} />
+      <LoginText>{text}</LoginText>
+    </Wrapper>
   );
 };
 export default OAuthLoginButton;
+
+const Wrapper = styled.div<{ bgColor: string }>`
+  background-color: ${({ bgColor }) => bgColor};
+  border-radius: 0.6rem;
+  padding: 1.1rem 1.4rem;
+  max-width: 24rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+`;
+
+const LoginLogo = styled.img`
+  max-width: 1.8rem;
+  max-height: 1.8rem;
+  object-fit: cover;
+`;
+
+const LoginText = styled.span`
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  flex: 1;
+  text-align: center;
+`;

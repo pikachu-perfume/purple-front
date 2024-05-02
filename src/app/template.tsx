@@ -2,8 +2,8 @@
 import { FC, useMemo } from "react";
 import useDeviceType, { MAX_MOBILE_WIDTH } from "@/hook/screen/useDeviceType";
 import { EmptyPropsChildren } from "@/constant/commonTypes";
-import { Footer, Header, Main, Section } from "@/components/atom/BoxComponents";
 import { AppBar } from "@mui/material";
+import styled from "@emotion/styled";
 
 export default function Template({ children }: { children: React.ReactNode }) {
   const { isMobile } = useDeviceType();
@@ -23,20 +23,36 @@ const PCTemplate: FC<EmptyPropsChildren> = ({ children }) => {
 
 const MobileTemplate: FC<EmptyPropsChildren> = ({ children }) => {
   return (
-    <Main display={"flex"} height={"100%"} flexDirection={"column"}>
-      <Header minHeight={"90px"} bgcolor={"red"}>
+    <Main>
+      <Header>
+        {/* TODO : appbar 필요없으면 지울 예정 */}
         <AppBar />
       </Header>
-      <Section
-        flex={1}
-        bgcolor={"aqua"}
-        width={"100%"}
-        maxWidth={MAX_MOBILE_WIDTH}
-        mx={"auto"}
-      >
-        {children}
-      </Section>
-      <Footer minHeight={"90px"} bgcolor={"tan"}></Footer>
+      <Section>{children}</Section>
+      <Footer></Footer>
     </Main>
   );
 };
+
+const Main = styled.main`
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+`;
+
+const Header = styled.header`
+  min-height: 90px;
+  background-color: red;
+`;
+
+const Section = styled.section`
+  flex: 1;
+  background-color: aqua;
+  width: 100%;
+  max-width: ${MAX_MOBILE_WIDTH};
+`;
+
+const Footer = styled.footer`
+  min-height: 90px;
+  background-color: tan;
+`;
