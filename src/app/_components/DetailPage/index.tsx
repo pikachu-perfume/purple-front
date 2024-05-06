@@ -13,11 +13,8 @@ import {
 } from "@/constant/detailTypes";
 
 function DetailPageContent() {
-  const [selectedComponent, setSelectedComponent] = useState<
-    JSX.Element | SelectButtonValueType
-  >(<DetailInfo />);
-
-  const [focus, setFocus] = useState<SelectButtonValueType>("INFO");
+  const [selectedComponent, setSelectedComponent] =
+    useState<SelectButtonValueType>("INFO");
 
   const sections: { [key in SelectButtonType]: SelectButtonValueType } = {
     "제품 정보": "INFO",
@@ -25,12 +22,17 @@ function DetailPageContent() {
   };
 
   const handleSelectClick = (value: SelectButtonValueType) => {
-    if (value === "INFO") {
-      setSelectedComponent(<DetailInfo />);
-      setFocus(value);
-    } else if (value === "COMMENT") {
-      setSelectedComponent(<DetailComment />);
-      setFocus(value);
+    setSelectedComponent(value);
+  };
+
+  const renderSelectedComponent = () => {
+    switch (selectedComponent) {
+      case "INFO":
+        return <DetailInfo />;
+      case "COMMENT":
+        return <DetailComment />;
+      default:
+        return null;
     }
   };
 
@@ -40,7 +42,7 @@ function DetailPageContent() {
       <S.SelectBtnWrapper>
         {Object.entries(sections).map(([key, value]) => (
           <S.FocusComponent
-            focus={focus === value}
+            focus={selectedComponent === value}
             key={key}
             onClick={() => handleSelectClick(value)}
           >
@@ -48,7 +50,7 @@ function DetailPageContent() {
           </S.FocusComponent>
         ))}
       </S.SelectBtnWrapper>
-      {selectedComponent}
+      {renderSelectedComponent()}
       <BottomBtn />
     </>
   );
