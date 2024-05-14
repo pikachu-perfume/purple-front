@@ -4,10 +4,10 @@ import styled from "@emotion/styled";
 // DetailComment
 const Wrapper = styled.div`
   background-color: ${theme.color.white};
-  padding: 1.6rem;
 `;
 
 const TotalComment = styled.div`
+  padding: 1.6rem;
   padding-bottom: 2rem;
   display: flex;
   align-items: center;
@@ -23,7 +23,7 @@ const TotalComment = styled.div`
 const CommentButtonWrap = styled.div`
   display: flex;
   justify-content: center;
-  padding: 2rem 0;
+  padding: 1.6rem;
 
   & > button {
     width: 100%;
@@ -39,7 +39,8 @@ const CommentButtonWrap = styled.div`
 
 // DetailReview
 const ReviewWrapper = styled.div`
-  padding: 2rem 0;
+  padding: 1.6rem;
+  border-bottom: 0.5px solid ${theme.color.grayColor[200]};
 
   & > span {
     font-weight: ${theme.fontWeight.bold};
