@@ -1,6 +1,8 @@
+/** @jsxImportSource @emotion/react */
 import React, { CSSProperties } from "react";
 import styled from "@emotion/styled";
 import { theme } from "@/styles/theme";
+import sizeCSS from "./styles";
 
 function Button({
   clickCallback,
@@ -8,18 +10,22 @@ function Button({
   disabled,
   className,
   type,
+  size,
   styleProps,
 }: {
   clickCallback?: () => void;
   buttonText: string;
   disabled?: boolean;
   className?: string;
+  size?: "primary" | undefined;
   type?: "button" | "submit" | "reset" | undefined;
   styleProps?: CSSProperties;
 }) {
   return (
     <ButtonBox className={className}>
       <button
+        // eslint-disable-next-line react/no-unknown-property
+        css={size ? sizeCSS[size] : undefined}
         style={{ ...styleProps }}
         disabled={disabled}
         onClick={() => clickCallback?.()}
@@ -47,7 +53,7 @@ const ButtonBox = styled.div<{
     background-color: ${theme.color.primary};
     flex-direction: row;
     cursor: pointer;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border: none;
     outline: none;

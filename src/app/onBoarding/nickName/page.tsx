@@ -3,13 +3,17 @@
 import Button from "@/components/atom/Button";
 import { S } from "./styles";
 import { ChangeEvent, useState } from "react";
+import { MAX_LENGTH } from "@/constant/common/textLength";
 
 function NickNameOnBoarding() {
   const [nickNameLength, setNickNameLength] = useState("");
+  const [focusInput, setFocusInput] = useState(false);
 
   const handleInputValue = (e: ChangeEvent<HTMLInputElement>) => {
+    if (e.target.value.length > MAX_LENGTH) {
+      e.target.value = e.target.value.slice(0, MAX_LENGTH);
+    }
     setNickNameLength(e.target.value);
-    console.log(nickNameLength, nickNameLength.length);
   };
 
   return (
@@ -19,16 +23,25 @@ function NickNameOnBoarding() {
         <S.NicknameLabel>
           반가워요! 당신을 뭐라고 부르면 좋을까요?
         </S.NicknameLabel>
-        <S.NickNameInputWrap>
-          <input
-            maxLength={10}
-            value={nickNameLength}
-            placeholder="2~10자 닉네임을 입력해주세요"
-            onChange={handleInputValue}
+        <S.FormWrap>
+          <S.NickNameInputWrap>
+            <input
+              maxLength={MAX_LENGTH}
+              value={nickNameLength}
+              placeholder="2~10자 닉네임을 입력해주세요"
+              onFocus={() => setFocusInput(true)}
+              onBlur={() => setFocusInput(false)}
+              onChange={handleInputValue}
+            />
+            {focusInput && <span>{nickNameLength.length}/10</span>}
+          </S.NickNameInputWrap>
+          <Button
+            type="submit"
+            disabled={nickNameLength.length === 0}
+            buttonText="다음으로"
+            size="primary"
           />
-          <span>{nickNameLength.length}/10</span>
-        </S.NickNameInputWrap>
-        <Button type="submit" buttonText="다음으로" />
+        </S.FormWrap>
       </S.Wrapper>
     </>
   );
