@@ -13,7 +13,7 @@ import styled from "@emotion/styled";
 
 type PropTypes = {
   onChange?: (value: number, index: number) => void;
-  size?: number;
+  size: number;
   index: number;
 } & Omit<RatingPropTypes, "onChange">;
 
@@ -34,7 +34,7 @@ const RatingComponent: FC<PropTypes> = ({
   precision = 1,
   initialValue = 0,
   onChange,
-  size = 40,
+  size,
   disabled,
   index,
 }) => {
@@ -89,6 +89,7 @@ const Wrapper = styled.div<{ size: number; value: number }>`
   & > img {
     position: absolute;
     height: 100%;
+    width: 100%;
   }
 
   & .base {
