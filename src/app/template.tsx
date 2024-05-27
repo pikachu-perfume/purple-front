@@ -40,19 +40,12 @@ const Main = styled.main`
   flex-direction: column;
 `;
 
-const Header = styled.header`
-  min-height: 90px;
-  background-color: red;
-`;
+const Header = styled.header``;
 
 const Section = styled.section`
   flex: 1;
-  background-color: aqua;
   width: 100%;
   max-width: ${MAX_MOBILE_WIDTH};
 `;
 
-const Footer = styled.footer`
-  min-height: 90px;
-  background-color: tan;
-`;
+const Footer = styled.footer``;
