@@ -1,6 +1,6 @@
 "use client";
 
-import Rating from "../atom/Rating";
+import Rating from "../atom/Rating/Rating";
 import { S } from "./styles";
 
 function EvaluationBanner() {
@@ -10,7 +10,7 @@ function EvaluationBanner() {
       <S.ContentsWrapper>
         <span>바이레도</span>
         <div>모하비고스트</div>
-        <Rating />
+        <Rating precision={0.1} />
       </S.ContentsWrapper>
     </S.Wrapper>
   );
