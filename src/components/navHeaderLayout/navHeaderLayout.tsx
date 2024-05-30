@@ -1,3 +1,4 @@
+import { theme } from "@/styles/theme";
 import styled from "@emotion/styled";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { useRouter } from "next/navigation";
@@ -33,6 +34,7 @@ const Wrapper = styled.div`
   position: absolute;
   padding: 1.8rem;
   width: 100%;
+  background-color: ${theme.color.white};
 `;
 
 const S = {
