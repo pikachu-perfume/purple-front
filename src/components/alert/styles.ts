@@ -18,14 +18,19 @@ const ContentsWrap = styled.div`
   justify-content: center;
   flex-direction: column;
   height: 100%;
+  margin: 4rem;
 
   & > div {
     color: ${theme.color.textDisabled};
+    font-size: ${theme.fontSize.sm};
+    white-space: pre-line;
+    display: flex;
+    text-align: center;
   }
 `;
 
 const Title = styled.span`
-  font-size: ${theme.fontSize.big};
+  font-size: ${theme.fontSize.md};
   font-weight: ${theme.fontWeight.semiBold};
 `;
 
