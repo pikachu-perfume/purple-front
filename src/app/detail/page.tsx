@@ -1,10 +1,10 @@
 "use client";
 
 import NavHeader from "@/components/navHeaderLayout/navHeaderLayout";
-import DetailPageContent from "../_components/DetailPage";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import styled from "@emotion/styled";
+import DetailPageContent from "./_components";
 
 function DetailPage() {
   return (
