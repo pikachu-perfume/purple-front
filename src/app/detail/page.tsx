@@ -9,10 +9,15 @@ import styled from "@emotion/styled";
 function DetailPage() {
   return (
     <S.Wrapper>
-      <NavHeader style={{ justifyContent: "space-between" }}>
-        <div>
+      <NavHeader>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "end",
+          }}
+        >
           <IosShareIcon sx={{ fontSize: "2.4rem" }} />
-          <FavoriteBorderIcon sx={{ fontSize: "2.4rem", marginLeft: "3rem" }} />
+          <FavoriteBorderIcon sx={{ fontSize: "2.4rem", marginLeft: "2rem" }} />
         </div>
       </NavHeader>
       <DetailPageContent />
