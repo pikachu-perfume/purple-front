@@ -2,9 +2,15 @@ import { theme } from "@/styles/theme";
 import styled from "@emotion/styled";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { useRouter } from "next/navigation";
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 
-function NavHeader({ children }: { children: ReactNode }) {
+function NavHeader({
+  children,
+  style,
+}: {
+  children: ReactNode;
+  style?: CSSProperties;
+}) {
   const router = useRouter();
 
   const handleRouterBack = () => {
@@ -12,7 +18,7 @@ function NavHeader({ children }: { children: ReactNode }) {
   };
 
   return (
-    <S.Wrapper>
+    <S.Wrapper style={style}>
       <div onClick={handleRouterBack}>
         <ArrowBackIosNewIcon sx={{ fontSize: "2.4rem" }} />
       </div>
@@ -25,7 +31,6 @@ export default NavHeader;
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  position: absolute;
   padding: 1.8rem;
   width: 100%;
   background-color: ${theme.color.white};
