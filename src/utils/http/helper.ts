@@ -4,7 +4,7 @@ import { TOKEN_SAVE_KEY } from "@/constant/session";
 
 export function httpConfigHelper(config: InternalAxiosRequestConfig) {
   const token = window.localStorage.getItem(TOKEN_SAVE_KEY);
-  config.headers.set("x-authentication-header", token);
+  token && config.headers.set("x-authentication-header", token);
   return config;
 }
 
