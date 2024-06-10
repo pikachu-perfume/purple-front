@@ -6,7 +6,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   background-color: ${theme.color.white};
   padding: 2rem;
-  margin-top: 6.7rem;
 `;
 
 const StepWrap = styled.div`

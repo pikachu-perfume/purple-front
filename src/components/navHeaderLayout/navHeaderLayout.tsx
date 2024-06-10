@@ -31,10 +31,13 @@ export default NavHeader;
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  position: absolute;
   padding: 1.8rem;
   width: 100%;
   background-color: ${theme.color.white};
+
+  & > div:last-of-type {
+    width: 100%;
+  }
 `;
 
 const S = {

@@ -13,7 +13,7 @@ const OneStep = () => {
   return (
     <>
       {/* TODO : 모바일 헤더 템플릿 삭제 시 한번 더 수정 필요 */}
-      <NavHeader style={{ justifyContent: "space-between" }}>
+      <NavHeader>
         {/* TODO : 브랜드 카드 선택 시 '건너뛰기' -> '다음으로' 로 변경 해야함 */}
         <span onClick={() => setOpenAlert(true)} style={{ fontWeight: "bold" }}>
           건너뛰기
