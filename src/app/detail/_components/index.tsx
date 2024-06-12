@@ -10,7 +10,7 @@ import { theme } from "@/styles/theme";
 import {
   SelectButtonType,
   SelectButtonValueType,
-} from "@/constant/detailTypes";
+} from "@/constant/detail.const";
 
 function DetailPageContent() {
   const [selectedComponent, setSelectedComponent] =
