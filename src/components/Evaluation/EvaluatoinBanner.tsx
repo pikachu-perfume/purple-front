@@ -10,7 +10,7 @@ function EvaluationBanner() {
       <S.ContentsWrapper>
         <span>바이레도</span>
         <div>모하비고스트</div>
-        <Rating precision={0.1} />
+        <Rating />
       </S.ContentsWrapper>
     </S.Wrapper>
   );

@@ -1,4 +1,4 @@
-import { OauthType } from "@/constant/session";
+import { OauthType } from "@/constant/auth.const";
 import { FC } from "react";
 import { theme } from "@/styles/theme";
 import styled from "@emotion/styled";

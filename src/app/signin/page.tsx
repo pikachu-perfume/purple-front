@@ -3,7 +3,7 @@
 import OAuthLoginButton from "@/components/atom/OAuthLoginButton";
 import { S } from "./styles";
 import { clientCreateLoginTry } from "@/service/client/signInService";
-import { OauthType } from "@/constant/session";
+import { OauthType } from "@/constant/auth.const";
 
 export default function SignInPage() {
   const onClickLoginType = async (type: OauthType) => {

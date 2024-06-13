@@ -3,7 +3,7 @@
 import NavHeader from "@/components/navHeaderLayout/navHeaderLayout";
 import { S } from "../styles";
 import EvaluationBanner from "@/components/Evaluation/EvaluatoinBanner";
-import { FilterType } from "@/constant/onBoardingTypes";
+import { FilterType } from "@/constant/onBoarding.const";
 
 const TwoStep = () => {
   return (
