@@ -7,7 +7,7 @@ function DetailEvaluation() {
       <span>평가하기</span>
       <div>평가하기의 부연설명</div>
       <S.RatingWrap>
-        <Rating precision={0.1} />
+        <Rating />
         <S.Score>
           <span>0.0</span>
           <span>/ 5.0</span>

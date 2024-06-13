@@ -3,7 +3,7 @@
 import NavHeader from "@/components/navHeaderLayout/navHeaderLayout";
 import { S } from "./styles";
 import Product from "./_components/Product/Product";
-import { CommentType } from "@/constant/comment";
+import { CommentType } from "@/constant/comment.const";
 import Rating from "@/components/atom/Rating/Rating";
 import Button from "@/components/atom/Button";
 
@@ -32,7 +32,7 @@ const CommentPage = () => {
         <S.EvaluationWrap>
           <span>이 향수 어때요?</span>
           <S.RatingWrap>
-            <Rating precision={0.1} />
+            <Rating />
             <div>향이 마음에 들어요</div>
           </S.RatingWrap>
         </S.EvaluationWrap>
