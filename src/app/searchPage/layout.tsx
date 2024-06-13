@@ -1,7 +1,7 @@
 'use client';
 
 import { S } from "./styles";
-import SearchBar from "@/components/atom/SearchBar/index";
+import SearchBar from "@/components/atom/SearchBar/SearchBar";
 
 const Searchlayout = ({
   children,

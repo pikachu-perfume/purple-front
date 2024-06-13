@@ -1,7 +1,7 @@
 "use client";
 
 import ProductHorizontalScroll from "./_components/ProductList/ProductHorizontalScroll";
-import ChipList from "@/components/organism/ChipList/index";
+import ChipList from "@/components/organism/ChipList/ChipList";
 import { S } from "./styles";
 
 const tempCurrentSearchList = ['딥티크', '오드뚜왈렛', '긴텍스트긴텍스트', '필로시코스', '딥티크', '오드뚜왈렛', '긴텍스트긴텍스트', '필로시코스']

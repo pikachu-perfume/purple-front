@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductCard from '@/components/molecule/ProductCard/index';
+import ProductCard from '@/components/molecule/ProductCard/ProductCard';
 import { S } from './styles'
 
 const ProductHorizontalScroll = () => {

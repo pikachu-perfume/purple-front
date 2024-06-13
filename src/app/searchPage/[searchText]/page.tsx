@@ -1,6 +1,6 @@
 'use client'
 
-import ProductCardGrid from '@/components/organism/ProductCardGrid/index';
+import ProductCardGrid from '@/components/organism/ProductCardGrid/ProductCardGrid';
 import { S } from "./styles";
 
 const SearchResultPage = () => {

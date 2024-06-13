@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import Chip from "@/components/molecule/Chip/index";
+import Chip from "@/components/molecule/Chip/Chip";
 
 type Props = {
     chipList: string[];
