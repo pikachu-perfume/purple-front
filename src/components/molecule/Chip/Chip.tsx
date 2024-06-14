@@ -2,12 +2,13 @@ import styled from "@emotion/styled";
 import { theme } from "@/styles/theme";
 
 type Props = {
-    text: string
+    text: string;
+    onChipClick: (text: string) => void;
 }
 
-const Chip = ({text}: Props) => {
+const Chip = ({text, onChipClick}: Props) => {
     return (
-        <S.ChipItem>
+        <S.ChipItem onClick={() => onChipClick(text)}>
             {text}
         </S.ChipItem>
     );

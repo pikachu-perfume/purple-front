@@ -2,15 +2,16 @@ import styled from "@emotion/styled";
 import Chip from "@/components/molecule/Chip/Chip";
 
 type Props = {
-    chipList: string[];
+  chipList: string[];
+  onChipClick: (text: string) => void;
 }
-const ChipList = ({chipList}: Props) => {
+const ChipList = ({chipList, onChipClick}: Props) => {
     return (
-        <S.Wrapper>
-            <S.List>
-                {chipList.map((chip, index) => <Chip key={index} text={chip} />)}
-            </S.List>
-        </S.Wrapper>
+      <S.Wrapper>
+        <S.List>
+          {chipList.map((chip, index) => <Chip key={index} text={chip} onChipClick={onChipClick} />)}
+        </S.List>
+      </S.Wrapper>
     );
 };
 
