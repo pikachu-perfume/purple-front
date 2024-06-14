@@ -46,16 +46,6 @@ const RatingWrap = styled.div`
 const ReviewWrap = styled.div`
   width: 100%;
   margin-bottom: 9rem;
-
-  & > textarea {
-    width: 100%;
-    border: none;
-    resize: none;
-    height: 11.4rem;
-    box-shadow: 0px 0px 18px -10px #821919;
-    border-radius: 2rem;
-    padding: 2rem;
-  }
 `;
 
 const ReviewTitle = styled.div`
@@ -67,6 +57,29 @@ const ReviewTitle = styled.div`
   & > div {
     color: red;
     margin-left: 0.4rem;
+  }
+`;
+const TextAreaWrap = styled.div`
+  width: 100%;
+  border: none;
+  resize: none;
+  height: 11.4rem;
+  box-shadow: 0px 0px 18px -10px #821919;
+  border-radius: 2rem;
+  padding: 2rem;
+  position: relative;
+
+  & > textarea {
+    width: 100%;
+    border: none;
+    height: 80%;
+  }
+
+  & > div {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1rem;
+    color: ${theme.color.subPrimary};
   }
 `;
 
@@ -85,5 +98,6 @@ export const S = {
   RatingWrap,
   ReviewWrap,
   ReviewTitle,
+  TextAreaWrap,
   CommentButton,
 };

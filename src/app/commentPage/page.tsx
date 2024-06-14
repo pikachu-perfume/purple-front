@@ -6,8 +6,16 @@ import Product from "./_components/Product/Product";
 import { CommentType } from "@/constant/comment.const";
 import Rating from "@/components/atom/Rating/Rating";
 import Button from "@/components/atom/Button";
+import { TEXTAREA_LENGTH } from "@/constant/common/textLength";
+import { ChangeEvent, useState } from "react";
 
 const CommentPage = () => {
+  const [textAreaLength, setTextAreaLength] = useState("");
+
+  const handleTextArea = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    setTextAreaLength(e.target.value);
+  };
+
   return (
     <>
       <NavHeader>
@@ -41,7 +49,16 @@ const CommentPage = () => {
             <span>리뷰 한줄평</span>
             <div>*</div>
           </S.ReviewTitle>
-          <textarea placeholder="개인이 느낀 향의 설명,어울리는 스타일이나 분위기 등을 작성하세요. "></textarea>
+          <S.TextAreaWrap>
+            <textarea
+              maxLength={TEXTAREA_LENGTH}
+              onChange={handleTextArea}
+              placeholder="개인이 느낀 향의 설명,어울리는 스타일이나 분위기 등을 작성하세요. "
+            />
+            <div>
+              {textAreaLength.length} / {TEXTAREA_LENGTH}자
+            </div>
+          </S.TextAreaWrap>
         </S.ReviewWrap>
         <S.CommentButton>
           <Button
