@@ -50,7 +50,16 @@ const SearchPage = () => {
                 )
             }
             {
-                keyword && (
+                true && keyword && (
+                    <S.SearchAutoCompleteArea>
+                        <ul>
+                            {['test1', 'test2', 'test3'].map((text) => <li key={text} onClick={() => handleChipClick(text)}>{text}</li>)}
+                        </ul>
+                    </S.SearchAutoCompleteArea>
+                )
+            }
+            {
+                false && keyword && (
                     <div>
                         {/* TODO : 메인의 scroll 위치를 기억해야하는 경우 */}
                         {false && <S.EmptyWrap>

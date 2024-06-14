@@ -69,8 +69,26 @@ const EmptyWrap = styled.div`
   }
 `;
 
+const SearchAutoCompleteArea = styled.div`
+    width: 100%;
+    height: calc(100vh - 74px);
+    border-top: 1px solid #D9D9DE;
+    background: ${theme.color.white};
+    padding: 0;
+    
+    & > ul {
+        padding: 0;
+        margin: 0;
+
+        & > li {
+            padding: 1.6rem;
+        }
+    }
+`
+
 export const S = {
     SearchTitle,
     SearchBarWrap,
-    EmptyWrap
+    EmptyWrap,
+    SearchAutoCompleteArea
 }
