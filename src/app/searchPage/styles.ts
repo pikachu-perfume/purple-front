@@ -18,10 +18,10 @@ const SearchTitle = styled.div`
 const SearchBarWrap = styled.div`
     display: flex;
     justify-content: space-between;
-    padding: 16px;
+    padding: 1.6rem;
 
     & > div {
-        width: calc(100% - 28px - 1.3rem);
+        width: calc(100% - 2.8rem - 1.3rem);
     }
 
     & > button {
@@ -40,7 +40,7 @@ const EmptyWrap = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: calc(100vh - 74px);
+  height: calc(100vh - 7.4rem);
   border-top: 1px solid #D9D9DE;
 
   & > div {
@@ -71,7 +71,7 @@ const EmptyWrap = styled.div`
 
 const SearchAutoCompleteArea = styled.div`
     width: 100%;
-    height: calc(100vh - 74px);
+    height: calc(100vh - 7.4rem);
     border-top: 1px solid #D9D9DE;
     background: ${theme.color.white};
     padding: 0;

@@ -12,9 +12,9 @@ const Wrapper = styled.div`
   & > ul {
     display: flex;
     flex-direction: row;
-    column-gap: 10px;
+    column-gap: 1rem;
     width: max-content;
-    padding: 0 16px;
+    padding: 0 1.6rem;
     margin: 0;
   }
 `;

@@ -13,10 +13,10 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    row-gap: 10px;
+    row-gap: 1rem;
     padding: 0;
     margin: 0;
-    padding-bottom: 10px;
+    padding-bottom: 1rem;
 
     & > li {
       width: 50vw;

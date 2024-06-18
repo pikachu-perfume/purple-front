@@ -7,6 +7,7 @@ import ProductCardGrid from '@/components/organism/ProductCardGrid/ProductCardGr
 import SearchBar from '@/components/atom/SearchBar/SearchBar';
 import ProductHorizontalScroll from "./_components/ProductList/ProductHorizontalScroll";
 import ChipList from "@/components/organism/ChipList/ChipList";
+import { goHome } from '@/utils/routerUtil';
 
 const tempCurrentSearchList = ['딥티크', '오드뚜왈렛', '긴텍스트긴텍스트', '필로시코스', '딥티크', '오드뚜왈렛', '긴텍스트긴텍스트', '필로시코스'];
 
@@ -15,8 +16,7 @@ const SearchPage = () => {
     const [keyword, setKeyword] = useState('');
 
     const handleClickCancel = (e: React.MouseEvent) => {
-        e.preventDefault();
-        router.push('/');
+        goHome(router);
     }
 
     const handleChipClick = (text: string) => {
@@ -26,7 +26,7 @@ const SearchPage = () => {
     return (
         <>
             <S.SearchBarWrap>
-                <SearchBar placeholderText="브랜드, 제품명, 리뷰로 찾아보세요" showSearchIcon={false} fontSize='sm' inputValue={keyword} onChange={(e) => setKeyword(e.target.value)} />
+                <SearchBar placeholderText="브랜드, 제품명, 리뷰로 찾아보세요" inputValue={keyword} onChange={(e) => setKeyword(e.target.value)} />
                 <button onClick={handleClickCancel}>취소</button>
             </S.SearchBarWrap>
             {

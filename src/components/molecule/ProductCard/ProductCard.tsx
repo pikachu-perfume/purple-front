@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { S } from "./styles";
 import StarRateIcon from '@mui/icons-material/StarRate';
 
@@ -7,7 +6,7 @@ const ProductCard = () => {
         <S.Wrapper>
             <S.Card>
                 <S.ImageBox>
-                    <Image src="/assets/images/bannerImg.png" alt="Product Image" fill />
+                    <img src="/assets/images/bannerImg.png" alt="Product Image" />
                 </S.ImageBox>
                 <S.TextBox>
                     <span>

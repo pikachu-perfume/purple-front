@@ -5,27 +5,21 @@ import SearchIcon from "@mui/icons-material/Search";
 
 type Props = {
   placeholderText: string;
-  showSearchIcon?: boolean;
-  fontSize?: 'sm' | 'base';
   inputValue: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 function SearchBar({
   placeholderText, 
-  showSearchIcon = true, 
-  fontSize = 'base',
   inputValue,
   onChange
 }: Props) {
 
   return (
-    <S.Wrapper showSearchIcon={showSearchIcon}>
+    <S.Wrapper>
       <S.SearchWrap>
-        {
-          showSearchIcon && <SearchIcon sx={{ fontSize: "2.5rem", color: "gray" }} />
-        }
-        <S.SearchInput placeholder={placeholderText} fontSize={fontSize} value={inputValue} onChange={onChange}  />
+        <SearchIcon sx={{ fontSize: "2.5rem", color: "gray" }} />
+        <S.SearchInput placeholder={placeholderText} value={inputValue} onChange={onChange}  />
       </S.SearchWrap>
     </S.Wrapper>
   );
