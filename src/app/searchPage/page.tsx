@@ -15,10 +15,6 @@ const SearchPage = () => {
     const router = useRouter();
     const [keyword, setKeyword] = useState('');
 
-    const handleClickCancel = (e: React.MouseEvent) => {
-        goHome(router);
-    }
-
     const handleChipClick = (text: string) => {
         setKeyword(text);
     };
@@ -27,7 +23,7 @@ const SearchPage = () => {
         <>
             <S.SearchBarWrap>
                 <SearchBar placeholderText="브랜드, 제품명, 리뷰로 찾아보세요" inputValue={keyword} onChange={(e) => setKeyword(e.target.value)} />
-                <button onClick={handleClickCancel}>취소</button>
+                <button onClick={() => goHome(router)}>취소</button>
             </S.SearchBarWrap>
             {
                 !keyword &&
