@@ -8,7 +8,7 @@ function NavHeader({
   children,
   style,
 }: {
-  children: ReactNode;
+  children?: ReactNode;
   style?: CSSProperties;
 }) {
   const router = useRouter();
