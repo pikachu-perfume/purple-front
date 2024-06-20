@@ -3,11 +3,10 @@ import styled from "@emotion/styled";
 
 const Wrapper = styled.div`
   background-color: ${theme.color.grayColor[100]};
-  width: 36rem;
-  height: 4.8rem;
+  width: 100%;
+  padding: 1.2rem 1.6rem;
   display: flex;
   align-items: center;
-  justify-content: center;
   border-radius: 3.2rem;
 `;
 
@@ -22,6 +21,7 @@ const SearchInput = styled.input`
   border: none;
   background-color: transparent;
   width: 100%;
+  outline: 0;
   font-size: ${theme.fontSize.base};
   margin-left: 1rem;
 `;

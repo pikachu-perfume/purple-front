@@ -3,9 +3,9 @@ const color = {
   secondaryViolet: "#7248CD",
   secondaryBlue: "#5A4DFF",
   grayColor: {
-    100: "##f7f7f8",
-    200: " #d9d9d9",
-    300: "##4b4b4b",
+    100: "#f7f7f8",
+    200: "#d9d9d9",
+    300: "#4b4b4b",
     400: "#f2f2f4",
     500: "#EEEEF0",
   },
