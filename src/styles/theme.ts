@@ -15,6 +15,7 @@ const color = {
     200: "#41424B", // text secondary
   },
   textDisabled: "#9091A0", // text, placeholder disabled
+  error: "#F93E3E",
   white: "#FFFFFF",
   black: "#000000",
   kakao: "#fee500",

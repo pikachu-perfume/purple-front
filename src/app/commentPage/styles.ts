@@ -1,13 +1,14 @@
 import { theme } from "@/styles/theme";
 import styled from "@emotion/styled";
 
-const Wrapper = styled.div`
+const Wrapper = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 1rem 2rem;
   position: relative;
+  margin-bottom: 11rem;
 `;
 
 const CommentWrap = styled.div`
@@ -53,11 +54,6 @@ const ReviewTitle = styled.div`
   font-size: ${theme.fontSize.base};
   font-weight: ${theme.fontWeight.semiBold};
   margin: 2rem 0;
-
-  & > div {
-    color: red;
-    margin-left: 0.4rem;
-  }
 `;
 const TextAreaWrap = styled.div`
   width: 100%;
@@ -85,10 +81,12 @@ const TextAreaWrap = styled.div`
 
 const CommentButton = styled.div`
   position: fixed;
-  bottom: 3rem;
+  bottom: 0;
   display: flex;
   justify-content: center;
   width: 100%;
+  height: 11rem;
+  background-color: ${theme.color.white};
 `;
 
 export const S = {

@@ -19,6 +19,7 @@ declare module "@emotion/react" {
         200: string; // text secondary
       };
       textDisabled: string; // text, placeholder disabled
+      error: string;
       white: string;
       black: string;
       kakao: string;

@@ -30,25 +30,25 @@ export const MoodCheckboxList = {
 } as const;
 
 export const PersistenceOptions = [
-  { value: "1", label: "매우 약함" },
+  { value: "1", label: `매우\n약함` },
   { value: "2", label: "약함" },
   { value: "3", label: "보통" },
   { value: "4", label: "오래감" },
-  { value: "5", label: "매우 오래감" },
+  { value: "5", label: `매우\n오래감` },
 ];
 
 export const ResidualScentOptions = [
-  { value: "1", label: "향 여운이 약함" },
-  { value: "2", label: "약함" },
-  { value: "3", label: "보통" },
-  { value: "4", label: "향 여운이 강함" },
+  { value: "1", label: `향 여운이\n약함` },
+  { value: "2", label: "보통" },
+  { value: "3", label: `향 여운이\n강함` },
+  { value: "4", label: `향 여운이\n매우 강함` },
 ];
 
 export const GenderOptions = [
   { value: "1", label: "남성" },
-  { value: "2", label: "남성에 가까운" },
+  { value: "2", label: `남성에\n가까운` },
   { value: "3", label: "중성" },
-  { value: "4", label: "여성에 가까운" },
+  { value: "4", label: `여성에\n가까운` },
   { value: "5", label: "여성" },
 ];
 

@@ -1,53 +1,82 @@
 import ErrorMessage from "@/components/ErrorMessage/ErrorMessage";
-import { AllFields } from "@/constant/comment.const";
+import RadioBtnGroup from "@/components/Radio/RadioGroup";
+import { RadioBtnOption } from "@/components/Radio/radio.type";
+import { theme } from "@/styles/theme";
+import { FieldDefinitionsType } from "@/types/commentTypes";
+import styled from "@emotion/styled";
 import { ReactNode } from "react";
-import { Control, Controller, FieldErrors, FieldValues } from "react-hook-form";
+import {
+  Control,
+  Controller,
+  FieldErrors,
+  RegisterOptions,
+} from "react-hook-form";
 
-type FormData = {
+type RadioFormData = {
   persistence?: string;
   residualScent?: string;
   gender?: string;
 };
 
+type Rules = Omit<
+  RegisterOptions<RadioFormData>,
+  "valueAsNumber" | "valueAsDate" | "setValueAs" | "disabled"
+>;
+
 interface RadioProps {
-  name: keyof FormData;
-  style: string;
+  name: keyof RadioFormData;
   label: string;
-  value: string | number;
-  control: Control<AllFields>;
-  errors: FieldErrors<FormData>;
+  value?: string | number;
+  control: Control<FieldDefinitionsType>;
+  errors: FieldErrors<FieldDefinitionsType>;
   children?: ReactNode;
+  options: RadioBtnOption[];
+  rules?: Rules;
 }
 
 export const RadioForm: React.FC<RadioProps> = ({
   name,
   control,
-  style,
   value,
   label,
+  options,
   errors,
+  rules,
   ...children
 }) => {
   return (
-    <div>
-      <div>
-        <Controller
-          name={name}
-          control={control}
-          render={({ field }) => (
-            <div className={style} {...field} {...children}>
-              <div></div>
-              <label>{label}</label>
-            </div>
-          )}
-        />
-      </div>
+    <S.Wrap>
+      <S.RadioTitle>{label}</S.RadioTitle>
+      <Controller
+        name={name}
+        rules={rules}
+        control={control}
+        render={({ field }) => (
+          <RadioBtnGroup
+            options={options}
+            value={field.value as string}
+            onChange={field.onChange}
+          />
+        )}
+      />
 
-      {errors && (
+      {errors[name] && (
         <div>
-          <ErrorMessage error={errors} />
+          <ErrorMessage error={errors[name]?.message || ""} />
         </div>
       )}
-    </div>
+    </S.Wrap>
   );
 };
+
+const Wrap = styled.div`
+  width: 100%;
+`;
+
+const RadioTitle = styled.div`
+  font-size: ${theme.fontSize.base};
+  margin: 1rem 0;
+  font-weight: ${theme.fontWeight.semiBold};
+`;
+
+const S = { Wrap, RadioTitle };
