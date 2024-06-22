@@ -13,7 +13,3 @@ export interface FieldDefinitionsType {
   gender: string;
   mood?: string;
 }
-
-export interface RadioRulesType {
-  required?: string | { value: boolean; message: string };
-}

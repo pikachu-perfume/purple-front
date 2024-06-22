@@ -12,15 +12,15 @@ const RadioWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 `;
 
 const RadioBtn = styled.input`
   -webkit-appearance: none;
   appearance: none;
   justify-content: space-around;
-  width: 28px;
-  height: 28px;
+  width: 2.8rem;
+  height: 2.8rem;
   border-radius: 50%;
   cursor: pointer;
   position: relative;
@@ -31,8 +31,8 @@ const RadioBtn = styled.input`
     content: "";
     display: block;
     border-radius: 50%;
-    width: 12px;
-    height: 12px;
+    width: 1.2rem;
+    height: 1.2rem;
     position: absolute;
     top: 50%;
     left: 50%;

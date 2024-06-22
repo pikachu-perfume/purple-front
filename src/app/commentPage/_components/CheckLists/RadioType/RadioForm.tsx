@@ -71,6 +71,7 @@ export const RadioForm: React.FC<RadioProps> = ({
 
 const Wrap = styled.div`
   width: 100%;
+  margin: 1rem 0;
 `;
 
 const RadioTitle = styled.div`

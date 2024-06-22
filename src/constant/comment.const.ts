@@ -58,51 +58,40 @@ export const FieldDefinitions = {
     label: "이 향수 어때요?",
     name: "rating",
     // type: "number",
-    rules: { required: validationMessages.rating },
   },
   textReview: {
     label: "리뷰 한줄평",
     name: "textReview",
     type: "text",
-    rules: { required: validationMessages.textReview },
   },
   persistence: {
     label: "지속력",
     name: "persistence",
     type: "radio",
     options: PersistenceOptions,
-    rules: { required: validationMessages.persistence },
   },
   residualScent: {
     label: "시야주",
     name: "residualScent",
     type: "radio",
     options: ResidualScentOptions,
-    rules: { required: validationMessages.residualScent },
   },
   season: {
     label: "계절감/시간",
     name: "season",
     type: "checkbox",
     options: SeasonCheckboxList,
-    rules: { required: validationMessages.season },
   },
   gender: {
     label: "성별",
     name: "gender",
     type: "radio",
     options: GenderOptions,
-    rules: { required: validationMessages.gender },
   },
   mood: {
     label: "향수에 어울리는 분위기",
     name: "mood",
     type: "checkbox",
     options: MoodCheckboxList,
-    rules: { required: validationMessages.mood },
   },
-};
-
-export type AllFields = {
-  [K in keyof typeof FieldDefinitions]: (typeof FieldDefinitions)[K];
 };
