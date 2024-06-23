@@ -9,7 +9,7 @@ type Props = {
 const ProfileBox = ({ onClick }: Props) => {
     return (
         <S.Wrapper onClick={onClick}>
-            <Profile />
+            <Profile width="6rem" height="6rem" />
             <S.textWrap>
                 <div>
                     <p>닉네임이 길면 이렇게 보이도록</p>

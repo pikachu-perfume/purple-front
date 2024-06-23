@@ -7,9 +7,11 @@ import { CSSProperties, ReactNode } from "react";
 function NavHeader({
   children,
   style,
+  iconColor,
 }: {
   children?: ReactNode;
   style?: CSSProperties;
+  iconColor?: string;
 }) {
   const router = useRouter();
 
@@ -20,7 +22,7 @@ function NavHeader({
   return (
     <S.Wrapper>
       <div onClick={handleRouterBack}>
-        <ArrowBackIosNewIcon sx={{ fontSize: "2.4rem" }} />
+        <ArrowBackIosNewIcon sx={{ fontSize: "2.4rem", color: iconColor }} />
       </div>
       <div style={style}>
         <div>{children}</div>
@@ -36,6 +38,10 @@ const Wrapper = styled.div`
   padding: 1.8rem;
   width: 100%;
   background-color: ${theme.color.white};
+
+  & > div:first-of-type {
+    line-height: 1;
+  }
 
   & > div:last-of-type {
     width: 100%;

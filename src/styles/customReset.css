@@ -1,0 +1,14 @@
+/* 필요한 reset css 정의 */
+p {
+  margin: 0;
+}
+
+input, button {
+  outline: none;
+  border: 0;
+}
+
+button {
+  background: transparent;
+  border: 0;
+}
