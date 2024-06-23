@@ -5,7 +5,7 @@ const Wrapper = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 141px;
+  width: 14.1rem;
 `;
 
 const ImageBox = styled.div`
