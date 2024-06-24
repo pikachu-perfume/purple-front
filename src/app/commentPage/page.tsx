@@ -59,7 +59,7 @@ const CommentPage = () => {
           ))}
         </S.CommentWrap>
         <S.EvaluationWrap>
-          <span>이 향수 어때요?</span>
+          <span>{FieldDefinitions.rating.label}</span>
           <S.RatingWrap {...register("rating", validationMessages.rating)}>
             <Rating setValue={setValue} />
             <div>향이 마음에 들어요</div>
@@ -70,7 +70,7 @@ const CommentPage = () => {
         </S.EvaluationWrap>
         <S.ReviewWrap>
           <S.ReviewTitle>
-            <span>리뷰 한줄평</span>
+            <span>{FieldDefinitions.textReview.label}</span>
           </S.ReviewTitle>
           <S.TextAreaWrap
             {...register("textReview", validationMessages.textReview)}
