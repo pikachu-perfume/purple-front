@@ -1,5 +1,3 @@
-import { validationMessages } from "./validation/commentValidation";
-
 export const CommentType = {
   SIMPLE: "간단한 코멘트",
   DETAIL: "자세한 코멘트",
@@ -57,7 +55,7 @@ export const FieldDefinitions = {
   rating: {
     label: "이 향수 어때요?",
     name: "rating",
-    // type: "number",
+    type: "number",
   },
   textReview: {
     label: "리뷰 한줄평",

@@ -2,7 +2,7 @@ import ErrorMessage from "@/components/ErrorMessage/ErrorMessage";
 import RadioBtnGroup from "@/components/Radio/RadioGroup";
 import { RadioBtnOption } from "@/components/Radio/radio.type";
 import { theme } from "@/styles/theme";
-import { FieldDefinitionsType } from "@/types/commentTypes";
+import { FieldDefinitionsType, RadioType } from "@/types/commentTypes";
 import styled from "@emotion/styled";
 import { ReactNode } from "react";
 import {
@@ -12,19 +12,13 @@ import {
   RegisterOptions,
 } from "react-hook-form";
 
-type RadioFormData = {
-  persistence?: string;
-  residualScent?: string;
-  gender?: string;
-};
-
 type Rules = Omit<
-  RegisterOptions<RadioFormData>,
+  RegisterOptions<RadioType>,
   "valueAsNumber" | "valueAsDate" | "setValueAs" | "disabled"
 >;
 
 interface RadioProps {
-  name: keyof RadioFormData;
+  name: keyof RadioType;
   label: string;
   value?: string | number;
   control: Control<FieldDefinitionsType>;

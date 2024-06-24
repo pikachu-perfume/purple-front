@@ -73,12 +73,22 @@
 
 import { useState } from "react";
 import styled from "@emotion/styled";
+import { UseFormSetValue, useFormContext } from "react-hook-form";
+import { FieldDefinitionsType } from "@/types/commentTypes";
 
-function Rating() {
+type RatingProps = {
+  setValue?: UseFormSetValue<FieldDefinitionsType>;
+};
+
+// TODO : rating이 사용되는곳이 어떤식으로 될지에 따라 변경해야함.
+function Rating({ setValue }: RatingProps) {
   const [rating, setRating] = useState(0);
 
   const handleRatingClick = (selectRating: number) => {
     setRating(selectRating);
+    if (setValue) {
+      setValue("rating", selectRating);
+    }
   };
 
   return (

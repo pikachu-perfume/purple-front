@@ -64,6 +64,7 @@ const TextAreaWrap = styled.div`
   border-radius: 2rem;
   padding: 2rem;
   position: relative;
+  margin-bottom: 1rem;
 
   & > textarea {
     width: 100%;

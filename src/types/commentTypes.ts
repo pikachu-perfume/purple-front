@@ -4,8 +4,13 @@ export interface RadioType {
   gender?: string;
 }
 
+export interface CheckboxType {
+  season?: string;
+  mood?: string;
+}
+
 export interface FieldDefinitionsType {
-  rating?: string;
+  rating?: number;
   textReview?: string;
   persistence?: string;
   residualScent: string;
