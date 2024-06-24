@@ -1,4 +1,4 @@
-import { COMMON_TEXTS } from "../common/commonTexts";
+import { COMMON_TEXTS } from "../../hook/ErrorMsg/commonMsg";
 import { TEXT_LENGTH } from "../common/textLength";
 
 export const validationMessages = {
