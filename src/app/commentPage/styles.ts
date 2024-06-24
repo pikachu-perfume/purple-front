@@ -1,13 +1,14 @@
 import { theme } from "@/styles/theme";
 import styled from "@emotion/styled";
 
-const Wrapper = styled.div`
+const Wrapper = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 1rem 2rem;
   position: relative;
+  margin-bottom: 11rem;
 `;
 
 const CommentWrap = styled.div`
@@ -46,16 +47,6 @@ const RatingWrap = styled.div`
 const ReviewWrap = styled.div`
   width: 100%;
   margin-bottom: 9rem;
-
-  & > textarea {
-    width: 100%;
-    border: none;
-    resize: none;
-    height: 11.4rem;
-    box-shadow: 0px 0px 18px -10px #821919;
-    border-radius: 2rem;
-    padding: 2rem;
-  }
 `;
 
 const ReviewTitle = styled.div`
@@ -63,19 +54,40 @@ const ReviewTitle = styled.div`
   font-size: ${theme.fontSize.base};
   font-weight: ${theme.fontWeight.semiBold};
   margin: 2rem 0;
+`;
+const TextAreaWrap = styled.div`
+  width: 100%;
+  border: none;
+  resize: none;
+  height: 11.4rem;
+  box-shadow: 0px 0px 18px -10px #821919;
+  border-radius: 2rem;
+  padding: 2rem;
+  position: relative;
+  margin-bottom: 1rem;
+
+  & > textarea {
+    width: 100%;
+    border: none;
+    height: 80%;
+  }
 
   & > div {
-    color: red;
-    margin-left: 0.4rem;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1rem;
+    color: ${theme.color.subPrimary};
   }
 `;
 
 const CommentButton = styled.div`
   position: fixed;
-  bottom: 3rem;
+  bottom: 0;
   display: flex;
   justify-content: center;
   width: 100%;
+  height: 11rem;
+  background-color: ${theme.color.white};
 `;
 
 export const S = {
@@ -85,5 +97,6 @@ export const S = {
   RatingWrap,
   ReviewWrap,
   ReviewTitle,
+  TextAreaWrap,
   CommentButton,
 };
