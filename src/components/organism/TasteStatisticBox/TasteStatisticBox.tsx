@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, ReactNode } from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement } from 'chart.js';
 import Link from 'next/link'
@@ -6,7 +6,7 @@ import { S } from "./styles";
 
 ChartJS.register(ArcElement);
 
-// TODO: 실 데이터로 변경 시 정해진 chartData type 파일에 정리 
+{/* TODO: 실 데이터로 변경 시 정해진 chartData type 파일에 정리  */} 
 type chartData = {
     tasteName: string;
     ranking: number;
@@ -18,9 +18,14 @@ type chartData = {
 type Props = {
     chartData: chartData[];
     reviewsNum: number;
+    children?: ReactNode;
 }
 
-const TasteStatisticBox = ({chartData, reviewsNum}: Props) => {
+const TasteStatisticBox = ({
+    chartData, 
+    reviewsNum, 
+    children
+}: Props) => {
     const options = {
         responsive: true,
         maintainAspectRatio: false,
@@ -88,7 +93,7 @@ const TasteStatisticBox = ({chartData, reviewsNum}: Props) => {
                     })
                 }
             </ul>
-            <Link href="/myPage/tasteAnalysisPage">취향 분석 보기</Link>
+            {children}
         </S.Wrapper>
     );
 };

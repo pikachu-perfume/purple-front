@@ -16,15 +16,15 @@ const MyPage = () => {
         {
             title: '평가향수',
             countNum: 22,
-            path: '/myPage/evaluationPerfumePage'
+            path: '/evaluationPerfumePage'
         },
         {
             title: '작성한 코멘트',
             countNum: 55,
-            path: '/myPage/myCommentsPage'
+            path: '/myCommentsPage'
         },
     ]);
-    // TODO: 임시 데이터
+    {/* TODO: 임시 데이터 */} 
     const tempChartData = [
         {
             tasteName: '구르망',
@@ -63,11 +63,13 @@ const MyPage = () => {
                 취향통계
             </S.Title>
             <S.TasteStatisticsWrap>
-                <TasteStatisticBox chartData={tempChartData} reviewsNum={30} />
+                <TasteStatisticBox chartData={tempChartData} reviewsNum={30}>
+                    <Link href="/myPage/tasteAnalysisPage">취향 분석 보기</Link>
+                </TasteStatisticBox>
             </S.TasteStatisticsWrap>
             {
                 pageButtonList.map((button, index) => {
-                    return <Link href={`/myPage/${button.path}`}><S.TitleButton key={index}><p>{button.title}<span>({button.countNum})</span></p><KeyboardArrowRightIcon sx={{ fontSize: "2.4rem", color: '#919193' }} /></S.TitleButton></Link>
+                    return <S.TitleButton key={index}><Link href={`/myPage/${button.path}`} ><p>{button.title}<span>({button.countNum})</span></p><KeyboardArrowRightIcon sx={{ fontSize: "2.4rem", color: '#919193' }} /></Link></S.TitleButton>
                 })
             }
             <PurfumeScroll />
