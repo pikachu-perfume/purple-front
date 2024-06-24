@@ -13,7 +13,7 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({
   selectBtn,
   onChange,
 }) => {
-  const handleToggle = (value: string) => {
+  const handleClickBox = (value: string) => {
     const isSelected = selectBtn.includes(value);
     let newSelectedValues: string[] = [];
 
@@ -30,7 +30,7 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({
       {Object.entries(options).map(([key, label]) => (
         <S.Box
           key={key}
-          onClick={() => handleToggle(key)}
+          onClick={() => handleClickBox(key)}
           selected={selectBtn.includes(key)}
         >
           {label}
