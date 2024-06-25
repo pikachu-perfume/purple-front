@@ -32,7 +32,7 @@ const HeaderInner = styled.div`
   }
 `;
 
-export const S = {
+const S = {
   Wrapper,
   HeaderInner,
 };

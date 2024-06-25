@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { S } from "./styles";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 import ProductCardGrid from "@/components/organism/ProductCardGrid/ProductCardGrid";
 import SearchBar from "@/components/atom/SearchBar/SearchBar";
 import ProductHorizontalScroll from "./_components/ProductList/ProductHorizontalScroll";

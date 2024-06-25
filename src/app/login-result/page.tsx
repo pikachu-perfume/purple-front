@@ -1,3 +1,5 @@
+"use client";
+
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 // import { TOKEN_SAVE_KEY } from "@/constant/session";

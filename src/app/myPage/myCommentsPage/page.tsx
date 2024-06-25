@@ -24,6 +24,6 @@ const HeaderInner = styled.div`
   }
 `;
 
-export const S = {
+const S = {
   HeaderInner,
 };

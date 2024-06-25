@@ -23,6 +23,7 @@ const ValidatedInput = ({
   {
     /* TODO: 서버 resp로 setError 설정 추가 필요 */
   }
+  const errorMessage = errors[id]?.message;
 
   return (
     <S.InputWrapper>
@@ -33,7 +34,9 @@ const ValidatedInput = ({
         {...register(id, validation)}
         className={errors[id] ? "redline" : ""}
       />
-      {errors[id] && <S.ValidatedText>{errors[id]?.message}</S.ValidatedText>}
+      {typeof errorMessage === "string" && (
+        <S.ValidatedText>{errorMessage}</S.ValidatedText>
+      )}
     </S.InputWrapper>
   );
 };
