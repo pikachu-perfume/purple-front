@@ -19,7 +19,7 @@ const color = {
   white: "#FFFFFF",
   black: "#000000",
   kakao: "#fee500",
-  red: "#FF3B3B"
+  red: "#FF3B3B",
 };
 
 const fontSize = {

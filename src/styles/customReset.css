@@ -1,16 +1,18 @@
 /* 필요한 reset css 정의 */
-body{
+body {
   -ms-overflow-style: none;
 }
 ::-webkit-scrollbar {
   display: none;
 }
-p, ul {
+p,
+ul {
   margin: 0;
   padding: 0;
 }
 
-input, button {
+input,
+button {
   outline: none;
   border: 0;
 }

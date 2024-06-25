@@ -1,19 +1,19 @@
-import React from 'react';
-import ProductCard from '@/components/molecule/ProductCard/ProductCard';
-import { S } from './styles'
+import React from "react";
+import ProductCard from "@/components/molecule/ProductCard/ProductCard";
+import { S } from "./styles";
 
 const ProductHorizontalScroll = () => {
-    return (
-        <S.Wrapper>
-            <ul>
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-            </ul>
-        </S.Wrapper>
-    );
+  return (
+    <S.Wrapper>
+      <ul>
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+      </ul>
+    </S.Wrapper>
+  );
 };
 
 export default ProductHorizontalScroll;

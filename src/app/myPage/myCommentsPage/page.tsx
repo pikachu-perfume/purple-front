@@ -1,18 +1,18 @@
 "use client";
 
 import styled from "@emotion/styled";
-import NavHeader from '@/components/navHeaderLayout/navHeaderLayout';
+import NavHeader from "@/components/navHeaderLayout/navHeaderLayout";
 
 const MyCommentsPage = () => {
-    return (
-        <>
-            <NavHeader>
-                <S.HeaderInner>
-                    <span>작성한 코멘트</span>
-                </S.HeaderInner>
-            </NavHeader>
-        </>
-    );
+  return (
+    <>
+      <NavHeader>
+        <S.HeaderInner>
+          <span>작성한 코멘트</span>
+        </S.HeaderInner>
+      </NavHeader>
+    </>
+  );
 };
 
 export default MyCommentsPage;
@@ -25,5 +25,5 @@ const HeaderInner = styled.div`
 `;
 
 export const S = {
-    HeaderInner,
+  HeaderInner,
 };

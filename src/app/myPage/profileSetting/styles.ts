@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { theme } from '@/styles/theme';
+import { theme } from "@/styles/theme";
 
 const HeaderInner = styled.div`
   text-align: center;
@@ -31,10 +31,10 @@ const Contents = styled.div`
     margin-top: 19.4rem;
 
     &:disabled {
-        background: ${theme.color.grayColor[500]};
-        color: ${theme.color.textDisabled};
-        font-weight: ${theme.fontWeight.bold};
-        font-size: ${theme.fontSize.md};
+      background: ${theme.color.grayColor[500]};
+      color: ${theme.color.textDisabled};
+      font-weight: ${theme.fontWeight.bold};
+      font-size: ${theme.fontSize.md};
     }
   }
 `;

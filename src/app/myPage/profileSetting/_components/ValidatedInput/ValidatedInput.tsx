@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import styled from "@emotion/styled";
-import { FieldErrors, UseFormRegister } from "react-hook-form";
-import { theme } from '@/styles/theme';
+import { FieldErrors, UseFormRegister, UseFormSetError } from "react-hook-form";
+import { theme } from "@/styles/theme";
 
 type Props = {
   labelText: string;
@@ -9,13 +9,30 @@ type Props = {
   register: UseFormRegister<any>;
   errors: FieldErrors;
   validation: Record<string, any>;
+  setError: UseFormSetError<any>;
 };
 
-const ValidatedInput = ({ labelText, id, register, errors, validation }: Props) => {
+const ValidatedInput = ({
+  labelText,
+  id,
+  register,
+  errors,
+  validation,
+  setError,
+}: Props) => {
+  {
+    /* TODO: 서버 resp로 setError 설정 추가 필요 */
+  }
+
   return (
     <S.InputWrapper>
       <label htmlFor={id}>{labelText}</label>
-      <input type="text" id={id} {...register(id, validation)} className={errors[id] ? 'redline' : ''} />
+      <input
+        type="text"
+        id={id}
+        {...register(id, validation)}
+        className={errors[id] ? "redline" : ""}
+      />
       {errors[id] && <S.ValidatedText>{errors[id]?.message}</S.ValidatedText>}
     </S.InputWrapper>
   );
@@ -24,7 +41,7 @@ const ValidatedInput = ({ labelText, id, register, errors, validation }: Props) 
 export default ValidatedInput;
 
 const InputWrapper = styled.div`
-width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 
@@ -34,11 +51,11 @@ width: 100%;
   }
 
   & > input {
-    background: #F7F8F9;
+    background: #f7f8f9;
     padding: 2rem 2.4rem;
     width: 100%;
     border-radius: 8px;
-    border: 1px solid #E8ECF4;
+    border: 1px solid #e8ecf4;
     color: ${theme.color.textDisabled};
 
     &:focus {
@@ -47,7 +64,7 @@ width: 100%;
     }
 
     &.redline {
-      border: 1px solid #FF3B3B;
+      border: 1px solid #ff3b3b;
       background: ${theme.color.white};
     }
   }
@@ -61,5 +78,5 @@ const ValidatedText = styled.p`
 
 const S = {
   InputWrapper,
-  ValidatedText
+  ValidatedText,
 };

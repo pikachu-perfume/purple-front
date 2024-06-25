@@ -6,15 +6,15 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.span`
-    display: block;
-    padding: 1.6rem;
-    font-weight: ${theme.fontWeight.semiBold};
+  display: block;
+  padding: 1.6rem;
+  font-weight: ${theme.fontWeight.semiBold};
 `;
 
 const TitleButton = styled.div`
   display: flex;
-  border-top: 3px solid #F9F9F9;
-  border-bottom: 3px solid #F9F9F9;
+  border-top: 3px solid #f9f9f9;
+  border-bottom: 3px solid #f9f9f9;
   padding: 1.6rem;
 
   & + div {
@@ -40,7 +40,7 @@ const TitleButton = styled.div`
 `;
 
 const ProfileBoxOuter = styled.div`
-    padding-bottom: 4.4rem;
+  padding-bottom: 4.4rem;
 `;
 
 const HeaderInner = styled.div`
@@ -56,10 +56,10 @@ const TasteStatisticsWrap = styled.div`
 `;
 
 export const S = {
-    Title,
-    ProfileBoxOuter,
-    HeaderInner,
-    TitleButton,
-    TasteStatisticsWrap,
-    Wrapper
+  Title,
+  ProfileBoxOuter,
+  HeaderInner,
+  TitleButton,
+  TasteStatisticsWrap,
+  Wrapper,
 };

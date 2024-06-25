@@ -1,14 +1,12 @@
 import { theme } from "@/styles/theme";
 import styled from "@emotion/styled";
 
-const StaticsSection = styled.section`
-
-`;
+const StaticsSection = styled.section``;
 
 const Title = styled.span`
-    display: block;
-    padding: 1.6rem;
-    font-weight: ${theme.fontWeight.semiBold};
+  display: block;
+  padding: 1.6rem;
+  font-weight: ${theme.fontWeight.semiBold};
 `;
 
 const HeaderInner = styled.div`
@@ -26,5 +24,5 @@ export const S = {
   Title,
   HeaderInner,
   TasteStatisticsWrap,
-  StaticsSection
+  StaticsSection,
 };

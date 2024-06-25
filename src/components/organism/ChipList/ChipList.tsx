@@ -4,15 +4,17 @@ import Chip from "@/components/molecule/Chip/Chip";
 type Props = {
   chipList: string[];
   onChipClick: (text: string) => void;
-}
-const ChipList = ({chipList, onChipClick}: Props) => {
-    return (
-      <S.Wrapper>
-        <S.List>
-          {chipList.map((chip, index) => <Chip key={index} text={chip} onChipClick={onChipClick} />)}
-        </S.List>
-      </S.Wrapper>
-    );
+};
+const ChipList = ({ chipList, onChipClick }: Props) => {
+  return (
+    <S.Wrapper>
+      <S.List>
+        {chipList.map((chip, index) => (
+          <Chip key={index} text={chip} onChipClick={onChipClick} />
+        ))}
+      </S.List>
+    </S.Wrapper>
+  );
 };
 
 export default ChipList;
@@ -37,7 +39,7 @@ const Wrapper = styled.div`
   }
 `;
 
-export const S = { 
-    List,
-    Wrapper
+export const S = {
+  List,
+  Wrapper,
 };

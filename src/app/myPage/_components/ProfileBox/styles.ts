@@ -14,7 +14,7 @@ const textWrap = styled.div`
   padding-left: 1.2rem;
   font-size: ${theme.fontSize.base};
   line-height: 1.6rem;
-  
+
   p {
     width: 70%;
     margin: 0;
@@ -41,5 +41,5 @@ const textWrap = styled.div`
 
 export const S = {
   Wrapper,
-  textWrap
+  textWrap,
 };

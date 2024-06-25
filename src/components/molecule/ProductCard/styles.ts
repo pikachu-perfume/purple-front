@@ -44,7 +44,7 @@ const TextBox = styled.div`
     color: ${theme.color.textDisabled};
     font-weight: ${theme.fontWeight.semiBold};
   }
-  
+
   & > p {
     margin: 0;
     text-wrap: wrap;
@@ -64,5 +64,5 @@ export const S = {
   ImageBox,
   Card,
   TextBox,
-  RatingWrap
+  RatingWrap,
 };
