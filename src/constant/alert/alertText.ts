@@ -1,12 +1,19 @@
-import { ConfirmAlertType } from "@/types/alertTypes";
+import { AlertType, ConfirmAlertType } from "@/types/alertTypes";
 
-// Alert 예시
+export const SEND_MAIL_ALERT: AlertType = {
+  message: `인증 메일을 발송했습니다.\n메일함을 확인해주세요.`,
+  ok: "확인",
+};
 
-// export const ALERT_EXAMPLE: Alert = {
-//   title: "제목",
-//   message: "메세지",
-//   ok: "확인",
-// };
+export const CHANGE_PW_ALERT: AlertType = {
+  message: "비밀번호가 변경되었습니다!",
+  ok: "확인",
+};
+
+export const VERIFY_ALERT: AlertType = {
+  message: "인증이 확인되었습니다!",
+  ok: "확인",
+};
 
 export const ONBOARDING_ALERT: ConfirmAlertType = {
   title: "온보딩을 건너뛰시겠어요?",

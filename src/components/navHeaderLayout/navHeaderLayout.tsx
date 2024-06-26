@@ -18,11 +18,13 @@ function NavHeader({
   };
 
   return (
-    <S.Wrapper style={style}>
+    <S.Wrapper>
       <div onClick={handleRouterBack}>
         <ArrowBackIosNewIcon sx={{ fontSize: "2.4rem" }} />
       </div>
-      <div>{children}</div>
+      <div style={style}>
+        <div>{children}</div>
+      </div>
     </S.Wrapper>
   );
 }
@@ -37,6 +39,8 @@ const Wrapper = styled.div`
 
   & > div:last-of-type {
     width: 100%;
+    display: flex;
+    align-items: center;
   }
 `;
 
