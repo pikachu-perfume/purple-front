@@ -2,12 +2,12 @@
 
 import React, { useState } from "react";
 import { S } from "./styles";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import ProductCardGrid from "@/components/organism/ProductCardGrid/ProductCardGrid";
 import SearchBar from "@/components/atom/SearchBar/SearchBar";
 import ProductHorizontalScroll from "./_components/ProductList/ProductHorizontalScroll";
 import ChipList from "@/components/organism/ChipList/ChipList";
-import { goHome } from "@/utils/routerUtil";
+// import { goHome } from "@/utils/routerUtil";
 
 const tempCurrentSearchList = [
   "딥티크",
@@ -36,7 +36,7 @@ const SearchPage = () => {
           inputValue={keyword}
           onChange={e => setKeyword(e.target.value)}
         />
-        <button onClick={() => goHome(router)}>취소</button>
+        <button onClick={() => router.push("/")}>취소</button>
       </S.SearchBarWrap>
       {!keyword && (
         <div>

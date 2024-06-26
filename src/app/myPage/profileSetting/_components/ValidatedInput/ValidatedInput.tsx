@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { FieldErrors, UseFormRegister, UseFormSetError } from "react-hook-form";
+import { FieldErrors, UseFormRegister } from "react-hook-form";
 import { theme } from "@/styles/theme";
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
   register: UseFormRegister<any>;
   errors: FieldErrors;
   validation: Record<string, any>;
-  setError: UseFormSetError<any>;
+  // setError: UseFormSetError<any>;
 };
 
 const ValidatedInput = ({
@@ -18,7 +18,7 @@ const ValidatedInput = ({
   register,
   errors,
   validation,
-  setError,
+  // setError,
 }: Props) => {
   {
     /* TODO: 서버 resp로 setError 설정 추가 필요 */

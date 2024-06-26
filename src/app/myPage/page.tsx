@@ -2,7 +2,7 @@
 
 import { S } from "./styles";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+// import { useState } from "react";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import NavHeader from "@/components/navHeaderLayout/navHeaderLayout";
 import ProfileBox from "./_components/ProfileBox/ProfileBox";
@@ -12,18 +12,18 @@ import Link from "next/link";
 
 const MyPage = () => {
   const route = useRouter();
-  const [pageButtonList, setPageButtonList] = useState([
-    {
-      title: "평가향수",
-      countNum: 22,
-      path: "/evaluationPerfumePage",
-    },
-    {
-      title: "작성한 코멘트",
-      countNum: 55,
-      path: "/myCommentsPage",
-    },
-  ]);
+  // const [pageButtonList, setPageButtonList] = useState([
+  //   {
+  //     title: "평가향수",
+  //     countNum: 22,
+  //     path: "/evaluationPerfumePage",
+  //   },
+  //   {
+  //     title: "작성한 코멘트",
+  //     countNum: 55,
+  //     path: "/myCommentsPage",
+  //   },
+  // ]);
   {
     /* TODO: 임시 데이터 */
   }
@@ -67,7 +67,19 @@ const MyPage = () => {
           <Link href="/myPage/tasteAnalysisPage">취향 분석 보기</Link>
         </TasteStatisticBox>
       </S.TasteStatisticsWrap>
-      {pageButtonList.map((button, index) => {
+      {/* TODO: pageButtonList 데이터로 변경 필요ㄴ */}
+      {[
+        {
+          title: "평가향수",
+          countNum: 22,
+          path: "/evaluationPerfumePage",
+        },
+        {
+          title: "작성한 코멘트",
+          countNum: 55,
+          path: "/myCommentsPage",
+        },
+      ].map((button, index) => {
         return (
           <S.TitleButton key={index}>
             <Link href={`/myPage/${button.path}`}>

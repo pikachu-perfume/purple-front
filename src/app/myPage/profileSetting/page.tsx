@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import NavHeader from "@/components/navHeaderLayout/navHeaderLayout";
 import { theme } from "@/styles/theme";
@@ -17,13 +17,13 @@ const ProfileSettingPage = () => {
   {
     /* TODO: 임시 이미지 코드 */
   }
-  const [profileImage, setProfileImage] = useState(
-    "https://images.unsplash.com/profile-1446404465118-3a53b909cc82?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128&s=27a346c2362207494baa7b76f5d606e5",
-  );
+  // const [profileImage, setProfileImage] = useState(
+  //   "https://images.unsplash.com/profile-1446404465118-3a53b909cc82?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128&s=27a346c2362207494baa7b76f5d606e5",
+  // );
   const {
     register,
     handleSubmit,
-    setError,
+    // setError,
     formState: { errors },
   } = useForm<FormValues>();
   const onSubmit: SubmitHandler<FormValues> = data => {
@@ -47,7 +47,9 @@ const ProfileSettingPage = () => {
         <Profile
           width="8rem"
           height="8rem"
-          image={profileImage}
+          image={
+            '"https://images.unsplash.com/profile-1446404465118-3a53b909cc82?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128&s=27a346c2362207494baa7b76f5d606e5"'
+          }
           isEdit
           onClick={handleClickProfile}
         />
@@ -57,7 +59,7 @@ const ProfileSettingPage = () => {
             id="nickname"
             register={register}
             errors={errors}
-            setError={setError}
+            // setError={setError}
             validation={{
               required: VALIDATED_PROFILE_NICKNAME.required,
               pattern: {

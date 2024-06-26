@@ -1,9 +1,9 @@
 import React, { useEffect, ReactNode } from "react";
 import { Doughnut } from "react-chartjs-2";
-import { Chart as ChartJS, ArcElement } from "chart.js";
+import { Chart, Plugin, registerables } from "chart.js";
 import { S } from "./styles";
 
-ChartJS.register(ArcElement);
+Chart.register(...registerables);
 
 {
   /* TODO: 실 데이터로 변경 시 정해진 chartData type 파일에 정리  */
@@ -28,9 +28,10 @@ const TasteStatisticBox = ({ chartData, reviewsNum, children }: Props) => {
     maintainAspectRatio: false,
   };
 
-  const plugins = [
+  const plugins: Plugin<"doughnut">[] = [
     {
-      beforeDraw: chart => {
+      id: "tasteStatic",
+      beforeDraw: (chart: Chart<"doughnut">) => {
         const { width, height, ctx } = chart;
         ctx.restore();
 
@@ -55,7 +56,7 @@ const TasteStatisticBox = ({ chartData, reviewsNum, children }: Props) => {
     },
   ];
 
-  let data = {
+  const data = {
     datasets: [
       {
         data: [42, 33, 25],
@@ -65,8 +66,8 @@ const TasteStatisticBox = ({ chartData, reviewsNum, children }: Props) => {
   };
 
   useEffect(() => {
-    let percentageList = chartData.map(data => data.percentageScore);
-    let backgroundColor = chartData.map(data => data.color);
+    const percentageList = chartData.map(data => data.percentageScore);
+    const backgroundColor = chartData.map(data => data.color);
 
     data.datasets[0].data = percentageList;
     data.datasets[0].backgroundColor = backgroundColor;
