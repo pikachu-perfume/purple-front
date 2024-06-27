@@ -60,9 +60,49 @@ const ButtonWrap = styled.div`
   }
 `;
 
+// Alert style
+
+const AlertWrapper = styled.div`
+  width: 28rem;
+  height: 17.7rem;
+  background-color: ${theme.color.white};
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 2.5rem;
+  justify-content: space-between;
+  flex-direction: column;
+`;
+
+const AlertButtonWrap = styled.div`
+  display: flex;
+  width: 100%;
+  height: 4.8rem;
+
+  & > button {
+    width: 100%;
+    color: ${theme.color.white};
+    background-color: ${theme.color.primary};
+    border-radius: 1rem;
+    border: none;
+  }
+`;
+
+const AlertContents = styled.div`
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: pre-line;
+`;
+
 export const S = {
   Wrapper,
   ContentsWrap,
   Title,
   ButtonWrap,
+  AlertWrapper,
+  AlertButtonWrap,
+  AlertContents,
 };

@@ -21,8 +21,7 @@ const OneStep = () => {
         </span>
       </NavHeader>
       {openAlert && (
-        // <ConfirmAlert setOpenAlert={setOpenAlert} message={ONBOARDING_ALERT} />
-        <Alert setOpenAlert={setOpenAlert} message={SEND_MAIL_ALERT} />
+        <ConfirmAlert setOpenAlert={setOpenAlert} message={ONBOARDING_ALERT} />
       )}
       <S.Wrapper>
         <S.StepWrap>
