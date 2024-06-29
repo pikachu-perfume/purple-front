@@ -3,14 +3,13 @@
 import styled from "@emotion/styled";
 import ProductCardGrid from "@/components/organism/ProductCardGrid/ProductCardGrid";
 import NavHeader from "@/components/navHeaderLayout/navHeaderLayout";
+import NavHeaderInner from "../../../components/navHeaderLayout/NavHeaderInner";
 
 const EvaluationPerfumePage = () => {
   return (
     <S.Wrapper>
       <NavHeader>
-        <S.HeaderInner>
-          <span>취향분석</span>
-        </S.HeaderInner>
+        <NavHeaderInner text="평가향수" />
       </NavHeader>
       <ProductCardGrid />
     </S.Wrapper>

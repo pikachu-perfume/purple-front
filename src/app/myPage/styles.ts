@@ -43,13 +43,6 @@ const ProfileBoxOuter = styled.div`
   padding-bottom: 4.4rem;
 `;
 
-const HeaderInner = styled.div`
-  text-align: center;
-  span {
-    font-size: 1.7rem;
-  }
-`;
-
 const TasteStatisticsWrap = styled.div`
   padding: 0 1.6rem;
   margin-bottom: 2.4rem;
@@ -58,7 +51,6 @@ const TasteStatisticsWrap = styled.div`
 export const S = {
   Title,
   ProfileBoxOuter,
-  HeaderInner,
   TitleButton,
   TasteStatisticsWrap,
   Wrapper,

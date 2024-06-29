@@ -3,6 +3,7 @@
 import { S } from "./styles";
 import NavHeader from "@/components/navHeaderLayout/navHeaderLayout";
 import TasteStatisticBox from "@/components/organism/TasteStatisticBox/TasteStatisticBox";
+import NavHeaderInner from "../../../components/navHeaderLayout/NavHeaderInner";
 
 const TasteAnalysisPage = () => {
   {
@@ -35,9 +36,7 @@ const TasteAnalysisPage = () => {
   return (
     <>
       <NavHeader>
-        <S.HeaderInner>
-          <span>취향분석</span>
-        </S.HeaderInner>
+        <NavHeaderInner text="취향분석" />
       </NavHeader>
       <S.StaticsSection>
         <S.Title>선호노트</S.Title>

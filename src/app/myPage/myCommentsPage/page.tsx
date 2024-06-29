@@ -6,6 +6,7 @@ import CommentBox from "../../../components/organism/CommentBox/CommentBox";
 import FilterBox from "@/components/organism/FilterBox/FilterBox";
 import Rating from "@/components/atom/Rating/Rating";
 import MoreButton from "../../../components/molecule/MoreButton/MoreButton";
+import NavHeaderInner from "../../../components/navHeaderLayout/NavHeaderInner";
 
 const MyCommentsPage = () => {
   const handleDeleteComment = () => {
@@ -15,9 +16,7 @@ const MyCommentsPage = () => {
   return (
     <>
       <NavHeader>
-        <S.HeaderInner>
-          <span>작성한 코멘트</span>
-        </S.HeaderInner>
+        <NavHeaderInner text="작성한 코멘트" />
       </NavHeader>
       <div>
         <FilterBox />
@@ -44,13 +43,6 @@ const MyCommentsPage = () => {
 
 export default MyCommentsPage;
 
-const HeaderInner = styled.div`
-  text-align: center;
-  span {
-    font-size: 1.7rem;
-  }
-`;
-
 const BrandCommentTopArea = styled.div`
   display: flex;
   align-items: center;
@@ -73,7 +65,6 @@ const RatingWrap = styled.div`
 const MoreButtonWrap = styled.div``;
 
 const S = {
-  HeaderInner,
   BrandCommentTopArea,
   RatingWrap,
   MoreButtonWrap,

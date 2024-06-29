@@ -27,7 +27,7 @@ const TitleWrap = styled.div`
 
   & > div {
     span {
-      &:first-child {
+      &:first-of-typeㄴ {
         font-weight: ${theme.fontWeight.bold};
       }
 

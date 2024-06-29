@@ -9,6 +9,7 @@ import ProfileBox from "./_components/ProfileBox/ProfileBox";
 import PurfumeScroll from "./_components/PurfumeScroll/PurfumeScroll";
 import TasteStatisticBox from "@/components/organism/TasteStatisticBox/TasteStatisticBox";
 import Link from "next/link";
+import NavHeaderInner from "../../components/navHeaderLayout/NavHeaderInner";
 
 const MyPage = () => {
   const route = useRouter();
@@ -54,9 +55,7 @@ const MyPage = () => {
   return (
     <S.Wrapper>
       <NavHeader>
-        <S.HeaderInner>
-          <span>마이페이지</span>
-        </S.HeaderInner>
+        <NavHeaderInner text="마이페이지" />
       </NavHeader>
       <S.ProfileBoxOuter>
         <ProfileBox onClick={() => route.push("/myPage/profileSetting")} />
