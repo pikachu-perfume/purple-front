@@ -1,6 +1,6 @@
 import { S } from "./styles";
 import StarRateIcon from "@mui/icons-material/StarRate";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const ProductCard = () => {
   const router = useRouter();

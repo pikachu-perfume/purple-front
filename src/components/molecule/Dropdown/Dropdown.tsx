@@ -17,7 +17,7 @@ const Dropdown = ({
   handleChangeSelectedFilter,
 }: Props) => {
   const [isShowDropdown, setIsShowDropdown] = useState(false);
-  const dropDownRef = useRef<HTMLDivElement | null>(null);
+  const dropDownRef = useRef<HTMLUListElement | null>(null);
 
   useEffect(() => {
     const outSideClick = (e: MouseEvent) => {
