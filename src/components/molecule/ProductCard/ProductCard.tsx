@@ -1,9 +1,16 @@
 import { S } from "./styles";
 import StarRateIcon from "@mui/icons-material/StarRate";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const ProductCard = () => {
+  const router = useRouter();
+
+  const handleClickProduct = () => {
+    router.push("/detail");
+  };
+
   return (
-    <S.Wrapper>
+    <S.Wrapper onClick={handleClickProduct}>
       <S.Card>
         <S.ImageBox>
           <img src="/assets/images/bannerImg.png" alt="Product Image" />

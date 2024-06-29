@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { theme } from "@/styles/theme";
 import ProductHorizontalScroll from "../../../searchPage/_components/ProductList/ProductHorizontalScroll";
+import Link from "../../../../../node_modules/next/link";
 
 const PurfumeScroll = () => {
   return (
@@ -10,7 +11,9 @@ const PurfumeScroll = () => {
           <span>인생향수</span>
           <span>5</span>
         </div>
-        <span>더보기</span>
+        <Link href="/myPage/favoritePerfumes">
+          <span>더보기</span>
+        </Link>
       </S.TitleWrap>
       <ProductHorizontalScroll />
     </>
@@ -27,7 +30,8 @@ const TitleWrap = styled.div`
 
   & > div {
     span {
-      &:first-of-typeㄴ {
+      font-weight: ${theme.fontWeight.bold};
+      &:first-of-type {
         font-weight: ${theme.fontWeight.bold};
       }
 
@@ -39,7 +43,7 @@ const TitleWrap = styled.div`
     }
   }
 
-  & > span {
+  & > a > span {
     color: ${theme.color.textDisabled};
   }
 `;

@@ -66,7 +66,7 @@ const MyPage = () => {
           <Link href="/myPage/tasteAnalysisPage">취향 분석 보기</Link>
         </TasteStatisticBox>
       </S.TasteStatisticsWrap>
-      {/* TODO: pageButtonList 데이터로 변경 필요ㄴ */}
+      {/* TODO: pageButtonList 데이터로 변경 필요 */}
       {[
         {
           title: "평가향수",

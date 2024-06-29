@@ -1,3 +1,5 @@
+"use client";
+
 import { theme } from "@/styles/theme";
 import styled from "@emotion/styled";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";

@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import ProductCardGrid from "@/components/organism/ProductCardGrid/ProductCardGrid";
 import NavHeader from "@/components/navHeaderLayout/navHeaderLayout";
 import NavHeaderInner from "../../../components/navHeaderLayout/NavHeaderInner";
+import FilterBox from "@/components/organism/FilterBox/FilterBox";
 
 const EvaluationPerfumePage = () => {
   return (
@@ -11,6 +12,7 @@ const EvaluationPerfumePage = () => {
       <NavHeader>
         <NavHeaderInner text="평가향수" />
       </NavHeader>
+      <FilterBox />
       <ProductCardGrid />
     </S.Wrapper>
   );
@@ -20,7 +22,7 @@ export default EvaluationPerfumePage;
 
 const Wrapper = styled.div`
   & > div:last-child {
-    padding-top: 6.9rem;
+    padding-top: 3rem;
   }
 `;
 
