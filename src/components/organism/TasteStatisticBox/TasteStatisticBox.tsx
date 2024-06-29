@@ -40,7 +40,7 @@ const TasteStatisticBox = ({ chartData, reviewsNum, children }: Props) => {
         ctx.font = "bold 20px sans-serif";
         ctx.textBaseline = "middle";
         const text1X = Math.round((width - ctx.measureText(text1).width) / 2);
-        const text1Y = height / 2 - 8;
+        const text1Y = height / 2;
         ctx.fillText(text1, text1X, text1Y);
 
         // text2 스타일 설정
@@ -48,7 +48,7 @@ const TasteStatisticBox = ({ chartData, reviewsNum, children }: Props) => {
         ctx.font = "14px sans-serif";
         ctx.textBaseline = "middle";
         const text2X = Math.round((width - ctx.measureText(text2).width) / 2);
-        const text2Y = height / 2 + 12;
+        const text2Y = height / 2 + 16;
         ctx.fillText(text2, text2X, text2Y);
 
         ctx.save();
