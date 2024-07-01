@@ -1,5 +1,6 @@
 const color = {
   primary: "#FF6E62",
+  subPrimary: "#F9A9A6",
   secondaryViolet: "#7248CD",
   secondaryBlue: "#5A4DFF",
   grayColor: {
@@ -14,9 +15,11 @@ const color = {
     200: "#41424B", // text secondary
   },
   textDisabled: "#9091A0", // text, placeholder disabled
+  error: "#F93E3E",
   white: "#FFFFFF",
   black: "#000000",
   kakao: "#fee500",
+  red: "#FF3B3B",
 };
 
 const fontSize = {

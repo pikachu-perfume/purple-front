@@ -3,15 +3,15 @@
 import Button from "@/components/atom/Button";
 import { S } from "./styles";
 import { ChangeEvent, useState } from "react";
-import { MAX_LENGTH } from "@/constant/common/textLength";
+import { TEXT_LENGTH } from "@/constant/common/textLength";
 
 function NickNameOnBoarding() {
   const [nickNameLength, setNickNameLength] = useState("");
   const [focusInput, setFocusInput] = useState(false);
 
   const handleInputValue = (e: ChangeEvent<HTMLInputElement>) => {
-    if (e.target.value.length > MAX_LENGTH) {
-      e.target.value = e.target.value.slice(0, MAX_LENGTH);
+    if (e.target.value.length > TEXT_LENGTH) {
+      e.target.value = e.target.value.slice(0, TEXT_LENGTH);
     }
     setNickNameLength(e.target.value);
   };
@@ -26,7 +26,7 @@ function NickNameOnBoarding() {
         <S.FormWrap>
           <S.NickNameInputWrap>
             <input
-              maxLength={MAX_LENGTH}
+              maxLength={TEXT_LENGTH}
               value={nickNameLength}
               placeholder="2~10자 닉네임을 입력해주세요"
               onFocus={() => setFocusInput(true)}

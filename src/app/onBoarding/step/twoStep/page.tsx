@@ -9,13 +9,9 @@ const TwoStep = () => {
   return (
     <>
       {/* TODO : 모바일 헤더 템플릿 삭제 시 한번 더 수정 필요 */}
-      <NavHeader>
+      <NavHeader style={{ justifyContent: "end" }}>
         {/* TODO : 브랜드 카드 선택 시 '건너뛰기' -> '다음으로' 로 변경 해야함 */}
-        <span
-          style={{ fontWeight: "bold", display: "flex", justifyContent: "end" }}
-        >
-          다음으로
-        </span>
+        <span style={{ fontWeight: "bold" }}>다음으로</span>
       </NavHeader>
       <S.Wrapper>
         <S.StepWrap>
