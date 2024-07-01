@@ -1,4 +1,5 @@
 import "./global.css";
+import "@/styles/customReset.css";
 import type { Metadata } from "next";
 import ReactQueryProviders from "@/provider/reactQueryProviders";
 import { ReactNode } from "react";
