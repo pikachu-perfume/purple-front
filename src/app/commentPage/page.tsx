@@ -39,12 +39,10 @@ const CommentPage = () => {
 
   return (
     <>
-      <NavHeader>
+      <NavHeader style={{ justifyContent: "center" }}>
         <div
           style={{
             fontSize: "1.8rem",
-            display: "flex",
-            justifyContent: "center",
             fontWeight: "bold",
           }}
         >

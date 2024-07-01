@@ -9,11 +9,15 @@ import DetailPageContent from "./_components";
 function DetailPage() {
   return (
     <S.Wrapper>
-      <NavHeader>
+      <NavHeader
+        style={{
+          display: "flex",
+          justifyContent: "end",
+        }}
+      >
         <div
           style={{
             display: "flex",
-            justifyContent: "end",
           }}
         >
           <IosShareIcon sx={{ fontSize: "2.4rem" }} />

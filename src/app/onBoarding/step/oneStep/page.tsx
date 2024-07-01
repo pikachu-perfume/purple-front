@@ -5,7 +5,8 @@ import { S } from "../styles";
 import { Card } from "./_components/Card/Card";
 import { useState } from "react";
 import ConfirmAlert from "@/components/alert/ConfirnAlert";
-import { ONBOARDING_ALERT } from "@/constant/alert/alertText";
+import { ONBOARDING_ALERT, SEND_MAIL_ALERT } from "@/constant/alert/alertText";
+import Alert from "@/components/alert/Alert";
 
 const OneStep = () => {
   const [openAlert, setOpenAlert] = useState(false);
@@ -13,7 +14,7 @@ const OneStep = () => {
   return (
     <>
       {/* TODO : 모바일 헤더 템플릿 삭제 시 한번 더 수정 필요 */}
-      <NavHeader>
+      <NavHeader style={{ justifyContent: "end" }}>
         {/* TODO : 브랜드 카드 선택 시 '건너뛰기' -> '다음으로' 로 변경 해야함 */}
         <span onClick={() => setOpenAlert(true)} style={{ fontWeight: "bold" }}>
           건너뛰기
