@@ -61,10 +61,14 @@ const ProfileSettingPage = () => {
             errors={errors}
             // setError={setError}
             validation={{
-              required: VALIDATED_PROFILE_NICKNAME.required,
+              required: VALIDATED_PROFILE_NICKNAME.filter(
+                item => item.type === "REQUIRED",
+              )[0].text,
               pattern: {
                 value: /^[^\s]+$/,
-                message: VALIDATED_PROFILE_NICKNAME.noWhitespace,
+                message: VALIDATED_PROFILE_NICKNAME.filter(
+                  item => item.type === "NO_WHITESPACE",
+                )[0].text,
               },
             }}
           />
